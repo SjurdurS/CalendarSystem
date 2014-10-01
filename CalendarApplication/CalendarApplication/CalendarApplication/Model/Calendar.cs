@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CalendarApplication.Model;
+﻿using System.Collections.Generic;
 
-namespace CalendarApplication
+namespace CalendarApplication.Model
 {
     class Calendar
     {
