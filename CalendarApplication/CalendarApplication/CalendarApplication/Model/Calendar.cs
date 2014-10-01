@@ -12,7 +12,7 @@ namespace CalendarApplication.Model
         /// <summary>
         /// The Color of the Calendar. Used to color the calendar in the View.
         /// </summary>
-        private string Color { get; set; }
+        public string Color { get; set; }
 
         /// <summary>
         /// List of users this Calendar is shared with.
