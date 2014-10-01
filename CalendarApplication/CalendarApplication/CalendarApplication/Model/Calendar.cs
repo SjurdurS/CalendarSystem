@@ -33,6 +33,11 @@ namespace CalendarApplication.Model
             this.SharedGroup = new List<OtherUser>();
         }
 
+        public void Share()
+        {
+            
+        }
+
 
     }
 }

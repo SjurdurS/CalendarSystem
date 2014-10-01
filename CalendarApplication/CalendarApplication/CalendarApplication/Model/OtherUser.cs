@@ -11,6 +11,6 @@ namespace CalendarApplication.Model
         /// <summary>
         /// The Username of the OtherUser.
         /// </summary>
-        private string Username;
+        public string Username { get; set;}
     }
 }
