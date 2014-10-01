@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalendarApplication
+namespace CalendarApplication.View
 {
-    class Event
+    class Notification
     {
-
     }
 }

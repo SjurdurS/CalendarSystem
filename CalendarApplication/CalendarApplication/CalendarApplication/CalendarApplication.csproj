@@ -54,6 +54,7 @@
     <Compile Include="Storage\Storage.cs" />
     <Compile Include="View\CalendarForm.cs" />
     <Compile Include="View\EventForm.cs" />
+    <Compile Include="View\Notification.cs" />
     <Compile Include="View\ShareForm.cs" />
   </ItemGroup>
   <ItemGroup>
