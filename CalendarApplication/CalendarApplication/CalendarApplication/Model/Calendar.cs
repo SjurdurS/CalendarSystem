@@ -28,7 +28,7 @@ namespace CalendarApplication.Model
         /// </summary>
         public Calendar()
         {
-            this.Name = "Calendar 1";
+            this.Name = Properties.Resources.DefaultCalendarName; // Default Calendar name
             this.Color = "Blue";
             this.SharedGroup = new List<OtherUser>();
         }

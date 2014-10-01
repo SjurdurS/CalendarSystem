@@ -12,6 +12,8 @@ namespace CalendarApplication
         static void Main(string[] args)
         {
             Console.WriteLine("Run program from here maybe.");
+            Console.WriteLine(Properties.Resources.DefaultCalendarColor);
+            Console.WriteLine(Properties.Resources.DefaultCalendarName);
         }
     }
 }
