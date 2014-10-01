@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalendarApplication
 {
-    class Program
+    class Calendar
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Run program from here maybe.");
-        }
     }
 }
