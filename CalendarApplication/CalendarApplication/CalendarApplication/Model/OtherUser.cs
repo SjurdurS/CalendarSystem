@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalendarApplication
+namespace CalendarApplication.Model
 {
-    class Calendar
+    class OtherUser
     {
         /// <summary>
-        /// The name of the Calendar.
+        /// The Username of the OtherUser.
         /// </summary>
-        private string Name;
-
-        private List<> 
+        private string Username;
     }
 }
