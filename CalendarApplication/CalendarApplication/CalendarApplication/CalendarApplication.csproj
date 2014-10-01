@@ -47,11 +47,9 @@
     <Compile Include="Controller\EventControl.cs" />
     <Compile Include="Controller\UpdateControl.cs" />
     <Compile Include="Model\Event.cs" />
-    <Compile Include="InviteNotice.cs" />
-    <Compile Include="InviteReply.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="Model\Message.cs" />
-    <Compile Include="NotifyUser.cs" />
+    <Compile Include="Controller\NotifyUserControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\IStorage.cs" />
