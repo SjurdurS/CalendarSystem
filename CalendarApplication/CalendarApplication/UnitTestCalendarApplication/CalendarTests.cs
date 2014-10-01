@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestCalendarApplication
 {
     [TestClass]
-    public class UnitTest1
+    public class CalendarTests
     {
         [TestMethod]
         public void TestMethod1()
