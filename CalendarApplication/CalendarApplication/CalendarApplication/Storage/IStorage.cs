@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CalendarApplication.Storage
 {
-    class Storage
+    interface IStorage
     {
+        
     }
 }
