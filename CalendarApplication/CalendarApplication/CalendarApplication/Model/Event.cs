@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CalendarApplication.Model;
 
 namespace CalendarApplication
 {
     class Event
     {
         public string Name { get; private set; }
-        public string color { get; private set; }
-        public DateTime startDateTime { get; private set; }
-        public DateTime endDateTime { get; private set; }
-        public Alarm alarm { get; private set; }
-        public string place { get; private set; }
-        public string description { get; private set; }
+        public string Color { get; private set; }
+        public DateTime StartDateTime { get; private set; }
+        public DateTime EndDateTime { get; private set; }
+        public Alarm Alarm { get; private set; }
+        public string Place { get; private set; }
+        public string Description { get; private set; }
 
         public Event()
         {
