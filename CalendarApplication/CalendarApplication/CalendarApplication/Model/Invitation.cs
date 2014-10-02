@@ -18,8 +18,8 @@ namespace CalendarApplication.Model
     {
         this._Name = Name;
         this._Message = Message;
-        this._Event = _event
-        ;
+        this._Event = _event;
+        
     }
 
 
@@ -28,8 +28,8 @@ namespace CalendarApplication.Model
         {
             this._Name = Name;
             this._Message = Message;
-            this._Calender = _calendar
-            ;
+            this._Calendar = _calendar;
+            
         }
 
         public SendInvite()

@@ -34,7 +34,7 @@ namespace CalendarApplication.Model
         }
 
         /// <summary>
-        /// Share the Calendar.
+        /// Share the Calendar with another user.
         /// </summary>
         /// <param name="otherUser">The recipient of the Calendar</param>
         public void Share(OtherUser otherUser)
