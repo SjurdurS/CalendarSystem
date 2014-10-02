@@ -9,17 +9,17 @@ namespace CalendarApplication.Model
     class OtherUser
     {
         /// <summary>
-        /// The Username of the OtherUser.
+        /// The EmailAddress of the OtherUser.
         /// </summary>
-        public string Username { get; set;}
+        public string EmailAddress { get; set;}
 
         /// <summary>
         /// Instantiate a new OtherUser object.
         /// </summary>
-        /// <param name="username">The username of the OtherUser</param>
-        public OtherUser(string username)
+        /// <param name="emailAddress">The EmailAddress of the OtherUser</param>
+        public OtherUser(string emailAddress)
         {
-            this.Username = username;
+            this.EmailAddress = emailAddress;
         }
     }
 }
