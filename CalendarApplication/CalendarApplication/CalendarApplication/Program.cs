@@ -14,6 +14,13 @@ namespace CalendarApplication
             Console.WriteLine("Run program from here maybe.");
             Console.WriteLine(Properties.Resources.DefaultCalendarColor);
             Console.WriteLine(Properties.Resources.DefaultCalendarName);
+
+
+            Calendar c = new Calendar();
+            Console.WriteLine(c.Name);
+            c.Name = "Hansen";
+            Console.WriteLine(c.Name);
+            
         }
     }
 }
