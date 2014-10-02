@@ -89,6 +89,24 @@ namespace CalendarApplication.Model
             }
         }
 
+        /// <summary>
+        /// Remove this Calendar from a Client.
+        /// </summary>
+        /// <param name="client">The Client to remove this Calendar from.</param>
+        public void RemoveFromClient(Client client)
+        {
+            client.RemoveCalendar(this);
+        }
+
+        /// <summary>
+        /// Add this Calendar to a Client.
+        /// </summary>
+        /// <param name="client">The Client to add this Calendar to.</param>
+        public void AddToClient(Client client)
+        {
+            client.AddCalendar(this);
+        }
+
 
     }
 }

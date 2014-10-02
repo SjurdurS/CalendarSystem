@@ -10,7 +10,7 @@ namespace CalendarApplication.Model
     /// <summary>
     /// This class represents a client. A client can have one or more Calendars assigned.
     /// </summary>
-    class Client
+    public class Client
     {
         /// <summary>
         /// The username of the Client.
@@ -96,6 +96,15 @@ namespace CalendarApplication.Model
             {
                 RemoveCalendar(calendar);
             }
+        }
+
+        /// <summary>
+        /// Add a Calendar to the Calendars list.
+        /// </summary>
+        /// <param name="calendar">The Calendar to add.</param>
+        public void AddCalendar(Calendar calendar)
+        {
+            this.Calendars.Add(calendar);
         }
     }
 }
