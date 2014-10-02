@@ -32,9 +32,5 @@ namespace CalendarApplication.Model
             
         }
 
-        public SendInvite()
-        {
-            
-        }
     }
 }
