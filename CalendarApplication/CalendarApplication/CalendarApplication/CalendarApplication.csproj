@@ -50,6 +50,7 @@
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
+    <Compile Include="Storage\MailSender.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Controller\NotifyUserControl.cs" />
     <Compile Include="Model\OtherUser.cs" />
