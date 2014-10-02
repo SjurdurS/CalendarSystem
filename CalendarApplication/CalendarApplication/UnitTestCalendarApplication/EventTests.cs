@@ -74,7 +74,6 @@ namespace UnitTestCalendarApplication
         }
 
 
-
         [TestMethod]
         public void Remove_An_Alarm_Type_Message_Test1()
         {
