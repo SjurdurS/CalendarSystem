@@ -65,6 +65,7 @@
     <Compile Include="View\CalendarForm.cs" />
     <Compile Include="View\EventForm.cs" />
     <Compile Include="Model\Notification.cs" />
+    <Compile Include="View\NotificationDisplay.cs" />
     <Compile Include="View\ShareForm.cs" />
   </ItemGroup>
   <ItemGroup>
