@@ -106,5 +106,17 @@ namespace CalendarApplication.Model
         {
             this.Calendars.Add(calendar);
         }
+
+        /// <summary>
+        /// Add a Collection of Calendars to the Calendars list.
+        /// </summary>
+        /// <param name="calendars">The Collection of Calendars to add.</param>
+        public void AddCalendars(List<Calendar> calendars)
+        {
+            foreach (Calendar calendar in calendars)
+            {
+                AddCalendar(calendar);
+            }
+        }
     }
 }
