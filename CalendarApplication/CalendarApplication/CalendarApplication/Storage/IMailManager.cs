@@ -9,16 +9,13 @@ namespace CalendarApplication.Model
     /// <summary>
     /// This class is used to send mails.
     /// </summary>
-    static class MailSender
+    interface IMailManager<T>
     {
 
         /// <summary>
         /// Send a mail.
         /// </summary>
         /// <param name="mail">The mail to send.</param>
-        public static void Send(Mail mail)
-        {
-            
-        }
+        void Send(T mail);
     }
 }
