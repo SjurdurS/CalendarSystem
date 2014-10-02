@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CalendarApplication.Model
+namespace CalendarApplication.View
 {
     class EventForm
     {
