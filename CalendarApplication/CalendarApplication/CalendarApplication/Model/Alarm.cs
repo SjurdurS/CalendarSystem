@@ -21,5 +21,10 @@ namespace CalendarApplication.Model
         {
             get { return AlarmDateTime; }
         }
+
+        public void NotifyClient()
+        {
+            
+        }
 }
 }

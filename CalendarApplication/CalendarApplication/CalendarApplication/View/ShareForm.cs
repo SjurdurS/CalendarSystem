@@ -1,6 +1,27 @@
-﻿namespace CalendarApplication.Model
+﻿using System;
+
+namespace CalendarApplication.Model
 {
-    class ShareForm
+    internal class ShareForm
     {
+        private string[] _ShareAdress;
+        private string _Name;
+
+
+
+        public ShareForm(string Name)
+        {
+            this._Name = Name;
+            this._ShareAdress = new string[5];
+        }
+
+        public void Sendinvite()
+        {
+            
+        }
+
+
+
     }
+
 }
