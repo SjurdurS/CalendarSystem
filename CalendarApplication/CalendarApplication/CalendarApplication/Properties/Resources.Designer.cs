@@ -77,5 +77,23 @@ namespace CalendarApplication.Properties {
                 return ResourceManager.GetString("DefaultCalendarName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red.
+        /// </summary>
+        internal static string DefaultEventColor {
+            get {
+                return ResourceManager.GetString("DefaultEventColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event 1.
+        /// </summary>
+        internal static string DefaultEventName {
+            get {
+                return ResourceManager.GetString("DefaultEventName", resourceCulture);
+            }
+        }
     }
 }
