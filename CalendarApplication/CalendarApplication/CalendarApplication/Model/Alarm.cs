@@ -2,6 +2,9 @@
 
 namespace CalendarApplication.Model
 {
+    /// <summary>
+    /// Superclass handles alarms that can be set on events. 
+    /// </summary>
     internal class Alarm
     {
         /// <summary>
