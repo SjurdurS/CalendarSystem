@@ -1,4 +1,5 @@
 ﻿using System;
+using CalendarApplication.Model;
 
 namespace CalendarApplication.View
 {
@@ -12,10 +13,9 @@ namespace CalendarApplication.View
         public string Place{ get; set; }
         public string Description{ get; set; }
 
-        public EventForm(string Name, string Color)
+        public EventForm()
         {
-            this.Name = Name;
-            this.Color = Color;
+
         }
 
         public EventForm(string Name, string Color, string Description)
