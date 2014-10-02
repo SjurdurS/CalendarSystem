@@ -14,9 +14,6 @@ namespace CalendarApplication.Model
             this.DateTime = dateTime;
         }
 
-        public void NotifyClient()
-        {
-            
-        }
+        
 }
 }
