@@ -13,7 +13,7 @@ namespace CalendarApplication.Model
     {
 
         /// <summary>
-        /// Send a mail.
+        /// Send an email.
         /// </summary>
         /// <param name="mail">The mail to send.</param>
         void Send(T mail);
