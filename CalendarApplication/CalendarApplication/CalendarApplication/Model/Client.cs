@@ -17,6 +17,14 @@ namespace CalendarApplication.Model
         /// </summary>
         public string Username { get; private set; }
 
+        /// <summary>
+        /// The email address of the client.
+        /// </summary>
+        public string EmailAddress { get; set; }
+
+        /// <summary>
+        /// List of Calendars the client has assigned.
+        /// </summary>
         public List<Calendar> Calendars { get; set; }
 
         /// <summary>
@@ -30,6 +38,18 @@ namespace CalendarApplication.Model
         }
 
         /// <summary>
+        /// Instantiate a Client with a username and an empty Calendars list.
+        /// </summary>
+        /// <param name="username">The username of the Client</param>
+        /// <param name="emailAddress">The emailaddress of the client.</param>
+        public Client(string username, string emailAddress)
+        {
+            this.Username = username;
+            this.EmailAddress = emailAddress;
+            this.Calendars = new List<Calendar>();
+        }
+
+        /// <summary>
         /// Instantiate a Client with a username and Calendars list.
         /// </summary>
         /// <param name="username">The username of the Client</param>
@@ -38,6 +58,20 @@ namespace CalendarApplication.Model
         {
             if (Calendars == null) throw new ArgumentNullException("calendars");
             this.Username = username;
+            this.Calendars = Calendars;
+        }
+
+        /// <summary>
+        /// Instantiate a Client with a username and Calendars list.
+        /// </summary>
+        /// <param name="username">The username of the Client</param>
+        /// <param name="emailAddress">The emailaddress of the client.</param>
+        /// <param name="calendars">The list of Calendars this client is assigned to</param>
+        public Client(string username, string emailAddress, List<Calendar> calendars )
+        {
+            if (Calendars == null) throw new ArgumentNullException("calendars");
+            this.Username = username;
+            this.EmailAddress = emailAddress;
             this.Calendars = Calendars;
         }
     }
