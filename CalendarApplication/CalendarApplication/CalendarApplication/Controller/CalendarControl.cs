@@ -11,15 +11,20 @@ namespace CalendarApplication.Controller
     /// </summary>
     class CalendarControl
     {
-        /* This method saves input from CalendarForm and link it to Calendar class 
-         * whenever there is clicked edit or save.*/
+
+        /// <summary>
+        /// This method saves input from CalendarForm and link it to Calendar class 
+        /// whenever there is clicked edit or save.
+        /// </summary>
         public void Save()
         {
             
         }
 
-        /*This method removes a calendar. When the Remove() method is called in CalendarForm 
-         * the controller links it to a remove method in the client list */
+        /// <summary>
+        /// This method removes a calendar. When the Remove() method is called in CalendarForm 
+        /// the controller links it to a remove method in the client list
+        /// </summary>
         public void Remove()
         {
             

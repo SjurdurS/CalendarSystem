@@ -2,7 +2,10 @@
 {
     class NotifyUserControl
     {
-        /* Links the Notification class to NotificationDisplay. */
+
+        /// <summary>
+        /// Links the Notification class to NotificationDisplay.
+        /// </summary>
         public void SendMessage()
         {
             
