@@ -61,5 +61,23 @@ namespace UnitTestCalendarApplication
             Assert.Fail("To do");
         }
 
+        [TestMethod]
+        public void Set_An_Alarm_Test1()
+        {
+            Assert.Fail("To do");
+        }
+
+        [TestMethod]
+        public void Edit_An_Alarm_Test1()
+        {
+            Assert.Fail("To do");
+        }
+
+        [TestMethod]
+        public void Remove_An_Alarm_Test1()
+        {
+            Assert.Fail("To do");
+        }
+
     }
 }
