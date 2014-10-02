@@ -125,4 +125,12 @@
     <value>Calendar 1</value>
     <comment>The default name the Calendar should be instantiated with.</comment>
   </data>
+  <data name="DefaultEventColor" xml:space="preserve">
+    <value>Red</value>
+    <comment>The default Color the Event should be instantiated with.</comment>
+  </data>
+  <data name="DefaultEventName" xml:space="preserve">
+    <value>Event 1</value>
+    <comment>The default name the Event should be instantiated with.</comment>
+  </data>
 </root>

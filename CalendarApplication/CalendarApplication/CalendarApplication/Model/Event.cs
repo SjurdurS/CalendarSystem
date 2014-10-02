@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CalendarApplication.Model;
 
-namespace CalendarApplication
+namespace CalendarApplication.Model
 {
     class Event
     {
+        /// <summary>
+        /// The name of the event.
+        /// </summary>
         public string Name { get; private set; }
         public string Color { get; private set; }
         public DateTime StartDateTime { get; private set; }
@@ -19,8 +17,8 @@ namespace CalendarApplication
 
         public Event()
         {
-            this.Name = Properties.Resources.DefaultCalendarName;
-            this.Color = Properties.Resources.DefaultCalendarColor;
+            this.Name = Properties.Resources.DefaultEventName;
+            this.Color = Properties.Resources.DefaultEventColor;
         }
     }
 

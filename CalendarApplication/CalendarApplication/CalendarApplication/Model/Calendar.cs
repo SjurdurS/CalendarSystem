@@ -39,7 +39,7 @@ namespace CalendarApplication.Model
         /// <param name="otherUser">The recipient of the Calendar</param>
         public void Share(OtherUser otherUser)
         {
-            // Send Mail to OtherUser
+            // Share Calendar with another user.
         }
 
 
