@@ -2,7 +2,7 @@
 
 namespace CalendarApplication.Model
 {
-    class Event
+    public class Event
     {
         /// <summary>
         /// The name of the event.

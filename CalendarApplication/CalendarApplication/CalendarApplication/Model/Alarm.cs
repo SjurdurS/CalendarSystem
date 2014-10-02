@@ -5,7 +5,7 @@ namespace CalendarApplication.Model
     /// <summary>
     /// Superclass handles alarms that can be set on events. 
     /// </summary>
-    internal class Alarm
+    public class Alarm
     {
         /// <summary>
         /// The date and time that the Client should recieve the notification.

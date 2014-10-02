@@ -54,6 +54,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EventTests.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalendarApplication\CalendarApplication.csproj">
+      <Project>{0bed411d-0300-498c-a37d-9e37840337f7}</Project>
+      <Name>CalendarApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

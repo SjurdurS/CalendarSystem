@@ -6,7 +6,7 @@ namespace CalendarApplication.Model
     /// <summary>
     /// This class represents a Calendar in the system. A Calendar has a name and a list of Events.
     /// </summary>
-    class Calendar
+    public class Calendar
     {
         /// <summary>
         /// The name of the Calendar.

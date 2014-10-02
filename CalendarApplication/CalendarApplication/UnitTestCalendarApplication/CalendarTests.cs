@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Net.Mime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestCalendarApplication
@@ -7,8 +9,10 @@ namespace UnitTestCalendarApplication
     public class CalendarTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CreateNewCalendar_Test1()
         {
+            CalendarApplication.Model.Calendar c = new CalendarApplication.Model.Calendar();
+
         }
     }
 }

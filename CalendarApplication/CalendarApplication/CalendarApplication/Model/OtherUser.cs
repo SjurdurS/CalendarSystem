@@ -9,7 +9,7 @@ namespace CalendarApplication.Model
     /// <summary>
     /// This class represents an other user.
     /// </summary>
-    class OtherUser
+    public class OtherUser
     {
         /// <summary>
         /// The name of the Other user.
