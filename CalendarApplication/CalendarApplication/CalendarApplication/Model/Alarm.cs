@@ -4,7 +4,10 @@ namespace CalendarApplication.Model
 {
     internal class Alarm
     {
-        public DateTime DateTime { get; set; } //The date and time that the Client should recieve the notification.
+        /// <summary>
+        /// The date and time that the Client should recieve the notification.
+        /// </summary>
+        public DateTime DateTime { get; set; }
 
         public Alarm(DateTime dateTime)
         {
