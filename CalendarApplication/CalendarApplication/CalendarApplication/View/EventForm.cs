@@ -27,5 +27,10 @@ namespace CalendarApplication.View
         {
             
         }
+
+        public void Save()
+        {
+            
+        }
     }
 }
