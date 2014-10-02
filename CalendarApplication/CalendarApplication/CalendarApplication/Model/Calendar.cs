@@ -33,9 +33,13 @@ namespace CalendarApplication.Model
             this.SharedGroup = new List<OtherUser>();
         }
 
-        public void Share()
+        /// <summary>
+        /// Share the Calendar.
+        /// </summary>
+        /// <param name="otherUser">The recipient of the Calendar</param>
+        public void Share(OtherUser otherUser)
         {
-            
+            // Send Mail to OtherUser
         }
 
 
