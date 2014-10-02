@@ -3,7 +3,7 @@
 namespace CalendarApplication.Model
 {
     /// <summary>
-    /// This class represents an alarm of type Mail. This mail should be sent when the alarm starts.
+    /// This subclass represents an alarm of type Mail. This mail should be sent when the alarm starts.
     /// </summary>
     class Mail : Alarm // Extends Alarm
     {

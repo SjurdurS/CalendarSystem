@@ -2,6 +2,10 @@
 
 namespace CalendarApplication.Model
 {
+    /// <summary>
+    /// This subclass of Alarm represents an alarm of type message. 
+    /// The Client recieves the message when the alarm sets.
+    /// </summary>
     class Message : Alarm // Extends Alarm
     {
         /// <summary>
