@@ -18,7 +18,7 @@ namespace CalendarApplication.Model
         public string Text { get; set; }
 
         /// <summary>
-        /// The email address.
+        /// The email address where to send the mail.
         /// </summary>
         public string Address { get; set; }
 
