@@ -74,5 +74,28 @@ namespace CalendarApplication.Model
             this.EmailAddress = emailAddress;
             this.Calendars = Calendars;
         }
+
+        /// <summary>
+        /// Remove a Calendar from the Clients list of Calendars.
+        /// </summary>
+        /// <param name="calendar">The calendar to remove</param>
+        /// <returns></returns>
+        public bool RemoveCalendar(Calendar calendar)
+        {
+            return this.Calendars.Remove(calendar);
+        }      
+        
+        /// <summary>
+        /// Remove a Calendar from the Clients list of Calendars.
+        /// </summary>
+        /// <param name="calendars">The calendars to remove.</param>
+        /// <returns></returns>
+        public void RemoveCalendars(List<Calendar> calendars)
+        {
+            foreach (Calendar calendar in calendars)
+            {
+                RemoveCalendar(calendar);
+            }
+        }
     }
 }

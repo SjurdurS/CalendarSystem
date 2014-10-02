@@ -22,5 +22,10 @@ namespace CalendarApplication.Model
         {
             
         }
+
+        public void Save()
+        {
+            
+        }
     }
 }
