@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CalendarApplication.Model
 {
     internal class ShareForm
     {
-        private string[] _ShareAdress;
+        private List<string> ShareAddress;
         private string _Name;
 
 
@@ -12,7 +13,7 @@ namespace CalendarApplication.Model
         public ShareForm(string Name)
         {
             this._Name = Name;
-            this._ShareAdress = new string[5];
+            this.ShareAddress = new List<string>();
         }
 
         
