@@ -7,19 +7,17 @@
 
         public Invitation SendInvite()
         {
-
+            return null;
         }
 
         public string SendReply()
         {
-
+            return null;
         }
 
         public string ErrorMessage()
         {
-
+            return null;
         }
     }
-}
-
 }
