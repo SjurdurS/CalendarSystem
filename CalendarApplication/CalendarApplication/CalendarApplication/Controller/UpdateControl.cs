@@ -8,5 +8,15 @@ namespace CalendarApplication.Controller
 {
     class UpdateControl
     {
+
+        public void AutoSync()
+        {
+            
+        }
+
+        public void Sync()
+        {
+            
+        }
     }
 }
