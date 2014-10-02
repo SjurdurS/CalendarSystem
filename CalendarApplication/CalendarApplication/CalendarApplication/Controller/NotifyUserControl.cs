@@ -2,5 +2,9 @@
 {
     class NotifyUserControl
     {
+        public void SendMessage()
+        {
+            
+        }
     }
 }

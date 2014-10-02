@@ -8,5 +8,19 @@ namespace CalendarApplication.Controller
 {
     class CalendarControl
     {
+        public void Save()
+        {
+            
+        }
+
+        public void Edit()
+        {
+            
+        }
+
+        public void Remove()
+        {
+            
+        }
     }
 }
