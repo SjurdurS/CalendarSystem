@@ -21,6 +21,29 @@ namespace CalendarApplication.Model
             this.Color = color;
         }
 
+        public void Share(OtherUser otherUser)
+        {
+            
+        }
+
+        /// <summary>
+        /// Add This Event to a Calendar.
+        /// </summary>
+        /// <param name="calendar">The Calendar to add this event to.</param>
+        public void AddToCalendar(Calendar calendar)
+        {
+            calendar.AddEvent(this);
+        }
+
+        /// <summary>
+        /// Remove This event from a Calendar.
+        /// </summary>
+        /// <param name="calendar">The Calendar to remove this event from.</param>
+        public void RemoveFromCalendar(Calendar calendar)
+        {
+            calendar.RemoveEvent(this);
+        }
+
     }
 
 

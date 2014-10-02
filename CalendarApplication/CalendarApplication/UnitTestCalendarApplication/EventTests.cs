@@ -11,13 +11,6 @@ namespace UnitTestCalendarApplication
     [TestClass]
     public class EventTests
     {
-        public EventTests()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
 
         #region Additional test attributes
         //
@@ -44,9 +37,7 @@ namespace UnitTestCalendarApplication
         [TestMethod]
         public void TestMethod1()
         {
-            //
-            // TODO: Add test logic here
-            //
+            Assert.Fail("To do");
         }
     }
 }
