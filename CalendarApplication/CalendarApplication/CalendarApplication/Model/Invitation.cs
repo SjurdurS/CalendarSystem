@@ -9,26 +9,26 @@ namespace CalendarApplication.Model
 {
     internal class Invitation
     {
-        private string _Name { get; set; }
-        private string _Message { get; set; }
-        private Event _Event;
-        private Calendar _Calendar;
+        private string Name { get; set; }
+        private string Message { get; set; }
+        private Event ev;
+        private Calendar calendar;
 
-        public Invitation(string Name, string Message, Event _event)
-    {
-        this._Name = Name;
-        this._Message = Message;
-        this._Event = _event;
-        
-    }
-
-
-
-        public Invitation(string Name, string Message, Calendar _calendar)
+        public Invitation(string name, string message, Event ev)
         {
-            this._Name = Name;
-            this._Message = Message;
-            this._Calendar = _calendar;
+            this.Name = name;
+            this.Message = message;
+            this.ev = ev;
+        
+         }
+
+
+
+        public Invitation(string name, string message, Calendar calendar)
+        {
+            this.Name = name;
+            this.Message = message;
+            this.calendar = calendar;
             
         }
 
