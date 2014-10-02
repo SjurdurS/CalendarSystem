@@ -20,6 +20,7 @@ namespace CalendarApplication.Model
             this.Name = Properties.Resources.DefaultEventName;
             this.Color = Properties.Resources.DefaultEventColor;
         }
+
     }
 
 
