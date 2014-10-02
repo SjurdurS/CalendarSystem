@@ -15,10 +15,10 @@ namespace CalendarApplication.Model
         public string Place { get; private set; }
         public string Description { get; private set; }
 
-        public Event()
+        public Event(string name, string color)
         {
-            this.Name = Properties.Resources.DefaultEventName;
-            this.Color = Properties.Resources.DefaultEventColor;
+            this.Name = name;
+            this.Color = color;
         }
 
     }

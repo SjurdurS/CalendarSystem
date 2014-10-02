@@ -32,10 +32,10 @@ namespace CalendarApplication.Model
         /// <summary>
         /// Instantiate a new Calendar.
         /// </summary>
-        public Calendar()
+        public Calendar(string name, string color)
         {
-            this.Name = Properties.Resources.DefaultCalendarName;
-            this.Color = Properties.Resources.DefaultCalendarColor;
+            this.Name = name;
+            this.Color = color;
             this.SharedGroup = new List<OtherUser>();
             this.Events = new List<Event>();
         }
