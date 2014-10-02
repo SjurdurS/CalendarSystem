@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestCalendarApplication
 {
     /// <summary>
-    /// Summary description for UnitTest1
+    /// Testing of the Event class.
     /// </summary>
     [TestClass]
     public class EventTests
@@ -59,7 +59,7 @@ namespace UnitTestCalendarApplication
         public void Remove_Event_From_NonExisting_Calendar_Test1()
         {
             Assert.Fail("To do");
-        }       
+        }
 
     }
 }

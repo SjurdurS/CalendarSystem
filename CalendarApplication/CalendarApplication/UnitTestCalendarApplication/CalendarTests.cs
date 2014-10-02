@@ -4,6 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestCalendarApplication
 {
+    /// <summary>
+    /// Testing of the Calendar class.
+    /// </summary>
     [TestClass]
     public class CalendarTests
     {
