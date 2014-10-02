@@ -19,12 +19,9 @@ namespace CalendarApplication
 
         public Event()
         {
-            
+            this.Name = Properties.Resources.DefaultCalendarName;
+            this.Color = Properties.Resources.DefaultCalendarColor;
         }
-
-
-         
-        
     }
 
 

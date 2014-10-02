@@ -48,6 +48,7 @@
     <Compile Include="Controller\UpdateControl.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Controller\NotifyUserControl.cs" />
