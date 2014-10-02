@@ -62,19 +62,38 @@ namespace UnitTestCalendarApplication
         }
 
         [TestMethod]
-        public void Set_An_Alarm_Test1()
+        public void Set_An_Alarm_Type_Message_Test1()
         {
             Assert.Fail("To do");
         }
 
         [TestMethod]
-        public void Edit_An_Alarm_Test1()
+        public void Edit_An_Alarm_Type_Message_Test1()
+        {
+            Assert.Fail("To do");
+        }
+
+
+
+        [TestMethod]
+        public void Remove_An_Alarm_Type_Message_Test1()
+        {
+            Assert.Fail("To do");
+        }
+        [TestMethod]
+        public void Set_An_Alarm_Type_Mail_Test1()
         {
             Assert.Fail("To do");
         }
 
         [TestMethod]
-        public void Remove_An_Alarm_Test1()
+        public void Edit_An_Alarm_Type_Mail_Test1()
+        {
+            Assert.Fail("To do");
+        }
+
+        [TestMethod]
+        public void Remove_An_Alarm_Type_Mail_Test1()
         {
             Assert.Fail("To do");
         }
