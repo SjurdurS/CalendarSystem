@@ -6,7 +6,7 @@ namespace CalendarApplication.Model
     {
         public string Text;
 
-        public Message(DateTime alarmDateTime, string text) : base(alarmDateTime)
+        public Message(DateTime dateTime, string text) : base(dateTime)
         {
             this.Text = text;
         }

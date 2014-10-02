@@ -4,36 +4,14 @@ namespace CalendarApplication.Model
 {
     class Mail : Alarm // Extends Alarm
     {
-        public string Text;
-        public string Address;
+        public string Text { get; set; }
+        public string Address { get; set; }
 
-        public Mail(DateTime alarmDateTime, string message, string address) : base(alarmDateTime)
+        public Mail(DateTime dateTime, string message, string address) : base(dateTime)
         {
             this.Text = message;
             this.Address = address;
         }
 
-
-        public string GetAddress
-        {
-            get { return Address; }
-        }
-
-        public string SetAddress
-        {
-            get { return Address; }
-            set { Address = value; }
-        }
-
-        public string GetText
-        {
-            get { return Text; }
-        }
-
-        public string SetText
-        {
-            get { return Text; }
-            set { Text = value; }
-        }
     }
 }

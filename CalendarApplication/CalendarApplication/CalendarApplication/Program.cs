@@ -20,7 +20,9 @@ namespace CalendarApplication
             Console.WriteLine(c.Name);
             c.Name = "Hansen";
             Console.WriteLine(c.Name);
-            
+
+            Mail m = new Mail(new DateTime(2014, 10, 2), "Wuuhuuu", "dude@me.com");
+            Console.WriteLine(m.DateTime);
         }
     }
 }
