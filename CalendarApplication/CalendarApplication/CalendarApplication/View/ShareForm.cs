@@ -15,10 +15,7 @@ namespace CalendarApplication.Model
             this._ShareAdress = new string[5];
         }
 
-        public void Sendinvite()
-        {
-            
-        }
+        
 
 
 
