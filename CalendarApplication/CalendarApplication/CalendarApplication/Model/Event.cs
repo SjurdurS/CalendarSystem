@@ -8,6 +8,10 @@ namespace CalendarApplication.Model
         /// The name of the event.
         /// </summary>
         public string Name { get; private set; }
+
+        /// <summary>
+        /// The color of the event.
+        /// </summary>
         public string Color { get; private set; }
         public DateTime StartDateTime { get; private set; }
         public DateTime EndDateTime { get; private set; }
@@ -15,12 +19,21 @@ namespace CalendarApplication.Model
         public string Place { get; private set; }
         public string Description { get; private set; }
 
+        /// <summary>
+        /// Instantiate a new Event.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="color"></param>
         public Event(string name, string color)
         {
             this.Name = name;
             this.Color = color;
         }
 
+        /// <summary>
+        /// Share the Event with another user.
+        /// </summary>
+        /// <param name="otherUser">The other user to share the event with.</param>
         public void Share(OtherUser otherUser)
         {
             
