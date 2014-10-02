@@ -23,7 +23,8 @@ namespace CalendarApplication.Model
         /// <summary>
         /// Instantiate a new OtherUser object.
         /// </summary>
-        /// <param name="emailAddress">The EmailAddress of the OtherUser</param>
+        /// <param name="name">The name of the Other user.</param>
+        /// <param name="emailAddress">The EmailAddress of the OtherUser.</param>
         public OtherUser(string name, string emailAddress)
         {
             this.Name = name;
