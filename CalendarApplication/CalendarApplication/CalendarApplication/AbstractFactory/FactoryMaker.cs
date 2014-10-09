@@ -1,6 +1,6 @@
 ﻿namespace CalendarApplication.AbstractFactory
 {
-    internal class FactoryMaker
+    public class FactoryMaker
     {
         private static AbstractFactory pf;
 
