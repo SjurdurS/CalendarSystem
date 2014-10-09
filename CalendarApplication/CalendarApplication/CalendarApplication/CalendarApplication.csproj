@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory\ConcreteFactoryDatabaseStorage.cs" />
+    <Compile Include="AbstractFactory\ConcreteFactoryFileStorage.cs" />
+    <Compile Include="AbstractFactory\ConcreteFactoryStub.cs" />
+    <Compile Include="AbstractFactory\FactoryMaker.cs" />
     <Compile Include="AdapterPattern\GoogleAdapter.cs" />
     <Compile Include="AdapterPattern\ICalendarEntry.cs" />
     <Compile Include="Sync StrategyPattern\ISynchronizationStrategy.cs" />
@@ -59,7 +64,7 @@
     <Compile Include="Sync StrategyPattern\OnOffManager.cs" />
     <Compile Include="Storage BridgePattern\Persistence.cs" />
     <Compile Include="Storage BridgePattern\PersistenceImp.cs" />
-    <Compile Include="Storage BridgePattern\PersistenceImplementor.cs" />
+    <Compile Include="Storage BridgePattern\IPersistenceImplementor.cs" />
     <Compile Include="Storage BridgePattern\FileStorage.cs" />
     <Compile Include="Storage BridgePattern\IMailManager.cs" />
     <Compile Include="Model\Message.cs" />
