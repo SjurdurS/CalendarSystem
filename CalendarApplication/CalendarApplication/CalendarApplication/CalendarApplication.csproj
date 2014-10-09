@@ -52,7 +52,11 @@
     <Compile Include="Model\ICalendarEntry.cs" />
     <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
-    <Compile Include="Storage\IMailManager.cs" />
+    <Compile Include="Storage BridgePattern\Persistence.cs" />
+    <Compile Include="Storage BridgePattern\PersistenceImp.cs" />
+    <Compile Include="Storage BridgePattern\PersistenceImplementor.cs" />
+    <Compile Include="Storage BridgePattern\FileStorage.cs" />
+    <Compile Include="Storage BridgePattern\IMailManager.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Controller\NotifyUserControl.cs" />
     <Compile Include="Model\OtherUser.cs" />
@@ -63,7 +67,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Storage\IStorage.cs" />
+    <Compile Include="Storage BridgePattern\IStorage.cs" />
+    <Compile Include="Storage BridgePattern\RdbmsStorage.cs" />
+    <Compile Include="Storage BridgePattern\TestStub.cs" />
     <Compile Include="View\CalendarForm.cs" />
     <Compile Include="View\EventForm.cs" />
     <Compile Include="Model\Notification.cs" />
