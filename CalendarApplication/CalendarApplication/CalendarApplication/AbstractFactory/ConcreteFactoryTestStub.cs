@@ -1,8 +1,8 @@
 ﻿namespace CalendarApplication.AbstractFactory
 {
-    internal class ConcreteFactoryStub : AbstractFactory
+    internal class ConcreteFactoryTestStub : AbstractFactory
     {
-        public override IPersistenceImplementor<T> CreateAbstractStub()
+        public override IPersistenceImplementor<T> CreateAbstractTestStub()
         {
             return new TestStub();
         }

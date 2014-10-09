@@ -2,7 +2,7 @@
 {
     internal class ConcreteFactoryDatabaseStorage : AbstractFactory
     {
-        public override IPersistenceImplementor<T> CreateAbstractStub()
+        public override IPersistenceImplementor<T> CreateAbstractTestStub()
         {
             return new TestStub();
         }

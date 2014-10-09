@@ -6,9 +6,9 @@
 
         private static AbstractFactory GetFactory(string choice)
         {
-            if (choice == "stub")
+            if (choice == "teststub")
             {
-                pf = new ConcreteFactoryStub();
+                pf = new ConcreteFactoryTestStub();
             }
             else if (choice == "fileStorage")
             {
