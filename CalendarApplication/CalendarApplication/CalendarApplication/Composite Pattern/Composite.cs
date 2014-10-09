@@ -7,7 +7,10 @@ using CalendarApplication.Model;
 
 namespace CalendarApplication.Composite_Pattern
 {
-    class Composite
+    /// <summary>
+    /// We do not fully understand what to implement in this design pattern
+    /// </summary>
+    class Composite : IEvent
     {
         /// <summary>
         /// List of events.
@@ -19,6 +22,13 @@ namespace CalendarApplication.Composite_Pattern
             eventList.Add(eventToAdd);
         }
 
-
+        /// <summary>
+        /// Move dates
+        /// </summary>
+        /// <param name="timeToMoveDateBy"></param>
+        public void MoveDate(DateTime timeToMoveDateBy)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

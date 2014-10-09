@@ -1,8 +1,9 @@
 ﻿using System;
+using CalendarApplication.Composite_Pattern;
 
 namespace CalendarApplication.Model
 {
-    public class Event
+    public class Event : IEvent
     {
         /// <summary>
         /// The name of the event.
@@ -57,6 +58,10 @@ namespace CalendarApplication.Model
             calendar.RemoveEvent(this);
         }
 
+        public void MoveDate(DateTime timeToMoveDateBy)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

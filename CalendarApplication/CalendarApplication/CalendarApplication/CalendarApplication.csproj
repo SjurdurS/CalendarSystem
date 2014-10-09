@@ -48,6 +48,8 @@
     <Compile Include="AbstractFactory\FactoryMaker.cs" />
     <Compile Include="AdapterPattern\GoogleAdapter.cs" />
     <Compile Include="AdapterPattern\ICalendarEntry.cs" />
+    <Compile Include="Command Pattern\Command.cs" />
+    <Compile Include="Command Pattern\TransactionCommand.cs" />
     <Compile Include="Composite Pattern\Composite.cs" />
     <Compile Include="Composite Pattern\IEvent.cs" />
     <Compile Include="Sync StrategyPattern\ISynchronizationStrategy.cs" />

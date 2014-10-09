@@ -36,5 +36,14 @@ namespace CalendarApplication.Model
         {
             throw new NotImplementedException();
         }
+
+        // Methods from the Google Calendar API
+        // delete
+        // get
+        // insert
+        // list
+        // patch
+        // update
+        // watch
     }
 }
