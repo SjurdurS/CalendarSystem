@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CalendarApplication.Model;
 
-namespace CalendarApplication.Model
+namespace CalendarApplication
 {
-    class OnOffManager
+    internal class OnOffManager
     {
         private NetworkConnection netCon;
         private ISynchronizationStrategy netIntf;
@@ -22,7 +18,6 @@ namespace CalendarApplication.Model
             {
                 netIntf = new OfflineSS();
             }
-            
         }
     }
 }

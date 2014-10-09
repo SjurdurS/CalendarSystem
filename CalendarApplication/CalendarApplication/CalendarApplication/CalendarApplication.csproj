@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ISynchronizationStrategy.cs" />
+    <Compile Include="Sync StrategyPattern\ISynchronizationStrategy.cs" />
     <Compile Include="Model\Alarm.cs" />
     <Compile Include="Model\Calendar.cs" />
     <Compile Include="Controller\CalendarControl.cs" />
@@ -53,10 +53,10 @@
     <Compile Include="Model\ICalendarEntry.cs" />
     <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
-    <Compile Include="Model\NetworkConnection.cs" />
-    <Compile Include="Model\OfflineSS.cs" />
-    <Compile Include="Model\OnlineSS.cs" />
-    <Compile Include="Model\OnOffManager.cs" />
+    <Compile Include="Sync StrategyPattern\NetworkConnection.cs" />
+    <Compile Include="Sync StrategyPattern\OfflineSS.cs" />
+    <Compile Include="Sync StrategyPattern\OnlineSS.cs" />
+    <Compile Include="Sync StrategyPattern\OnOffManager.cs" />
     <Compile Include="Storage BridgePattern\Persistence.cs" />
     <Compile Include="Storage BridgePattern\PersistenceImp.cs" />
     <Compile Include="Storage BridgePattern\PersistenceImplementor.cs" />
