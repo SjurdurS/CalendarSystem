@@ -46,8 +46,10 @@
     <Compile Include="Controller\CalendarControl.cs" />
     <Compile Include="Controller\EventControl.cs" />
     <Compile Include="Controller\UpdateControl.cs" />
+    <Compile Include="Model\GoogleAdapter.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\ICalendarEntry.cs" />
     <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="Storage\IMailManager.cs" />
