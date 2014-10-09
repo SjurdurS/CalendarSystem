@@ -53,6 +53,7 @@
     <Compile Include="Model\ICalendarEntry.cs" />
     <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
+    <Compile Include="Model\NetworkConnection.cs" />
     <Compile Include="Model\OfflineSS.cs" />
     <Compile Include="Model\OnlineSS.cs" />
     <Compile Include="Model\OnOffManager.cs" />
