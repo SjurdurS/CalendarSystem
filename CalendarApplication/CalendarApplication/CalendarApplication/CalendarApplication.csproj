@@ -41,10 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract Factory\ConcreteFactoryDatabase.cs" />
-    <Compile Include="Abstract Factory\ConcreteFactoryFileStorage.cs" />
-    <Compile Include="Abstract Factory\ConcreteFactoryStub.cs" />
-    <Compile Include="Abstract Factory\FactoryMaker.cs" />
     <Compile Include="AdapterPattern\GoogleAdapter.cs" />
     <Compile Include="AdapterPattern\ICalendarEntry.cs" />
     <Compile Include="Sync StrategyPattern\ISynchronizationStrategy.cs" />
