@@ -41,16 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterPattern\GoogleAdapter.cs" />
+    <Compile Include="AdapterPattern\ICalendarEntry.cs" />
     <Compile Include="Sync StrategyPattern\ISynchronizationStrategy.cs" />
     <Compile Include="Model\Alarm.cs" />
     <Compile Include="Model\Calendar.cs" />
     <Compile Include="Controller\CalendarControl.cs" />
     <Compile Include="Controller\EventControl.cs" />
     <Compile Include="Controller\UpdateControl.cs" />
-    <Compile Include="Model\GoogleAdapter.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Event.cs" />
-    <Compile Include="Model\ICalendarEntry.cs" />
     <Compile Include="Model\Invitation.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="Sync StrategyPattern\NetworkConnection.cs" />
