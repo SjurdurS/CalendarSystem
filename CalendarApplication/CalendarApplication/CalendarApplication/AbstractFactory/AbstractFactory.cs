@@ -1,6 +1,6 @@
 ﻿namespace CalendarApplication.AbstractFactory
 {
-    public abstract class AbstractFactory
+    public abstract class AbstractFactory<T>
     {
         public abstract IPersistenceImplementor<T> CreateAbstractTestStub();
         public abstract IPersistenceImplementor<T> CreateAbstractFileStorage();
