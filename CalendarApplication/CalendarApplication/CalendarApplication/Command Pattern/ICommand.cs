@@ -10,9 +10,9 @@ namespace CalendarApplication.Command_Pattern
     /// <summary>
     /// The 'Command abstract class
     /// </summary>
-    abstract class Command
+    interface ICommand
     {
-        public abstract void Execute();
-        public abstract void UnExecute();
+        void Execute();
+        void UnExecute();
     }
 }

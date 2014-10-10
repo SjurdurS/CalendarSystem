@@ -1,19 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CalendarApplication.Command_Pattern;
 
-namespace CalendarApplication.Command_Pattern
+namespace CalendarApplication
 {
-    class TransactionCommand : Command
+    internal class TransactionCommand : ICommand
     {
-        public override void Execute()
+        public void Execute()
         {
             throw new NotImplementedException();
         }
 
-        public override void UnExecute()
+        public void UnExecute()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
         {
             throw new NotImplementedException();
         }
