@@ -1,0 +1,10 @@
+\select@language {danish}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{4}{chapter.1}
+\contentsline {paragraph}{Usability: }{4}{section*.5}
+\contentsline {paragraph}{Response time: }{4}{section*.6}
+\contentsline {paragraph}{Extensibility: }{4}{section*.7}
+\contentsline {chapter}{\chapternumberline {2}Current software architecture}{5}{chapter.2}
+\contentsline {chapter}{\chapternumberline {3}Proposed software architecture}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{6}{section.3.1}
+\contentsline {chapter}{\chapternumberline {4}Subsystem services}{8}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Glossary}{9}{chapter.5}

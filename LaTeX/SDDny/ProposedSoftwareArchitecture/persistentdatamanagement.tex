@@ -1,0 +1,13 @@
+\section{Persistent data management}
+\subsection{Persistent data}
+
+\textbf {FileStorage} is responsible for storing the data from the calendar on the computer. This functionality is used before the system is synchronized. When synchronized, the data is stored in DBStorageSubsystem, and the data in LocalStoreSubsystem is deleted. 
+
+\textbf{RDBMStorage} is responsible for storing all data from ManageSubsystem in a database for the server. 
+
+
+\subsection*{Selecting strategy}
+\begin{itemize}
+	\item In the FileStorage the data is stored as flat files in plain text. 
+	\item Data in RDBMStorage is stored in af Relational Database. 
+\end{itemize}

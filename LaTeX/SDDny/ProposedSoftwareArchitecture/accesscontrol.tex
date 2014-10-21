@@ -1,0 +1,91 @@
+\section{Access control and security}
+
+In fact that our program have multiple users it good to clarify what functions that are available for the different users in the three states a Calendar can be. The three states that our calendar can be in is.
+
+\begin{itemize}
+	\item The Global: This Calendar is visible to all users, that subscribe, but it can only be edited by the Client that made the Calendar.
+	\item The Local: This Calendar is the one that the Client have shared with his friends, family og coworkers. Both the Client and the subscribing clients have the opportunity see and edit events. The Client that created the Calendar, off course as the only one has the possibility to delete the Calendar.
+	\item The Account: The Calendar that can only be seen and edited by the Client that it was created by. 
+\end{itemize}
+
+With those informations in the back of our head we made an Access Matrix to get a better view of our Objects Actors functions or method calls available at the different states of a Calendar. 
+
+\begin{tabular}{|p{2.9cm}|p{3.6cm}|p{3.6cm}|p{3.6cm}|}
+\hline
+\textbf{Object Actors}
+&
+\textbf{Global}
+&
+\textbf{Local}
+&
+\textbf{Account} \\
+\hline
+\textbf{Client}
+& 
+\begin{itemize}
+\item getCalender() 
+\item setCalender() 
+\item getEvent()
+\item setEvent()
+\item unsubscribe()
+\item getUser()
+\item save()
+\item delete()
+\end{itemize} 
+& 
+\begin{itemize}
+\item getCalender() 
+\item setCalender() 
+\item getEvent() 
+\item setEvent()
+\item unsubscribe()
+\item getUser()
+\item save()
+\item delete()
+\end{itemize} 
+&
+\begin{itemize}
+\item getCalender() 
+\item setCalender() 
+\item getEvent() 
+\item setEvent()
+\item unsubscribe()
+\item getUser()
+\item save()
+\item delete()
+\end{itemize} 
+ \\ \hline
+\textbf{Server}
+& 
+\begin{itemize}
+\item update()
+\end{itemize} 
+& 
+\begin{itemize}
+\item update()
+\end{itemize} 
+&
+\begin{itemize}
+\item update()
+\end{itemize} 
+ \\ \hline
+\textbf{Subscribing Client}
+& 
+\begin{itemize}
+\item getCal()
+\item getEvent()
+\end{itemize} 
+& 
+\begin{itemize}
+\item getCal()
+\item setCal() 
+\item getEvent()
+\item setEvent()
+\item unsubscribe()
+\item getusers()
+\item save()
+\end{itemize}
+&
+No subscribing clients
+ \\ \hline
+\end{tabular}

@@ -1,0 +1,10 @@
+\begin {longtable}{@{}ll>{\hsize =\vhAuthorColWidth }X>{\hsize =\vhChangeColWidth }X@{}}
+\textbf {\vhversionname }
+ & \textbf {\vhdatename }
+ & \textbf {\vhauthorname }
+ & \textbf {\vhchangename }\\[1ex]
+1.0
+ & 21.10.14
+ & \listset {anud|ntho|sjri}
+ & Revision: Removed non-functional requirements from Design goals. Updated component diagrams. More coherent.\\
+\end {longtable}
