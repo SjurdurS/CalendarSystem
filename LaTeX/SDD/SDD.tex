@@ -97,7 +97,7 @@ The subsystem SyncManagement is where we keep our calendars up to date, where we
 \newline
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{diagram.png}
+\includegraphics[width=135mm]{UMLComponentData.png}
 \end{figure}
 
 
@@ -114,31 +114,20 @@ Our Calendar system is run by two devices. The user program run on the user comp
 
 Now that we have mapped our program to the hardware that is used to run our system we dicoverred that some informations had to be handled between the computer and the server. Therefore we have made up a Component Diagram with the subsystems. If we study the ‘ManagingSubSystem’ the ‘SyncSubSystem’ and the ‘ShareSubSystem’, we find that they all have instances of the same classes. This information kept in these instances has to be transfered from the computer to the server via a network connection. Here commes the ‘ControlSubSystem’ in play, this is our subsystem that handles the information and connection between the ‘SyncSubSystem’ and the ‘ManagingSubSystem. The last subsystem ‘CommunicationSubSystem’ will handle the connection to the ‘ShareSubSystem’
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=160mm]{UMLComponent.png}
-\caption{UML Component diagram \label{overflow}}
-\end{figure}
-
 
 \clearpage
 \section*{Persistent data management}
 \subsection{Persistent data}
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=160mm]{UMLComponentData.png}
-\caption{Subsystem decomposition with data stores (UML Component diagram) \label{overflow}}
-\end{figure}
 
-\textbf{LocalStoreSubsystem} is responsible for storing the data from the calendar on the computer. This functionality is used before the system is synchronized. When synchronized, the data is stored in DBStorageSubsystem, and the data in LocalStoreSubsystem is deleted. 
+\textbf {FileStorage} is responsible for storing the data from the calendar on the computer. This functionality is used before the system is synchronized. When synchronized, the data is stored in DBStorageSubsystem, and the data in LocalStoreSubsystem is deleted. 
 
-\textbf{DBStorageSubsystem} is responsible for storing all data from ManageSubsystem in a database for the server. 
+\textbf{RDBMStorage} is responsible for storing all data from ManageSubsystem in a database for the server. 
 
 
 \subsection*{Selecting strategy}
 \begin{itemize}
-	\item In the LocalStoreSubsystem the data is stored as flat files in plain text. 
-	\item Data in DBStorageSubsystem is stored in af Relational Database. 
+	\item In the FileStorage the data is stored as flat files in plain text. 
+	\item Data in RDBMStorage is stored in af Relational Database. 
 \end{itemize}
 
 \clearpage
