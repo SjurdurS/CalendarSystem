@@ -15,7 +15,49 @@
 
 \paragraph{Extensibility: } The Calendar system should support the opportunity to extend the program and make it interact with different calendar programs such as Google Calendar, Exchange and iCal. 
 
+\subsubsection{Non-functional requirements}
+\paragraph{Usaility}
+\begin{itemize}
+	\item The user should have basic experience using computers.
+	\item The user should be familiar with popular OS interfaces, e.g. Windows 7 or 8.
+	\item The user should be able to use the system without little or no documentation.
+\end{itemize}
 
+\paragraph{Reliability}
+\begin{itemize}
+	\item It is important that the Calendars are synchronized.
+	\item Restarting of the system is acceptable in the event of a failure.
+	\item The system may lost at most five of the last changes made by the user in the event of failure.
+\end{itemize}
+
+\newpage
+\paragraph{Performance}
+\begin{itemize}
+	\item The system should be responsive. There should be little to no latency during actions.
+	\item Server synchronization should take no longer than 1-2 minutes on an average home internet connection.
+	\item The system should support different user accounts on a computer.
+\end{itemize}
+
+\paragraph{Supportability}
+\begin{itemize}
+	\item Extensions could be the support of other types of Calendar systems, such as GMail, Yahoo Mail etc
+\end{itemize}
+
+\paragraph{Implementation}
+\begin{itemize}
+	\item Internet connection is needed for synchronizing with the server. If no internet connection is available the data is only stored locally.
+	\item The data is saved locally and on the server.
+\end{itemize}
+
+\paragraph{Operation}
+\begin{itemize}
+	\item The user manages the system.
+\end{itemize}
+
+\paragraph{Package}
+\begin{itemize}
+	\item The system is installed by the user.
+\end{itemize}
 
 %\section*{Overview}
 
@@ -24,7 +66,7 @@
 
 \section*{Overview}
 
-\textbf{Architectural style}
+subsection*{Architectural style}
 \newline
  We decided to use the MVC pattern as the basic architectural style for the Calendar system.
 \newline
@@ -67,7 +109,22 @@ In our Object Oriented Analysis an Analysis Object Model was defined where we id
 
 The Analysis Object Model is a simplification of MVC pattern. It made it eaiser to set up the MVC pattern and build further on the Object Oriented Design. 
 
-\newpage
+\subsection*{UML Class diagram}
+Our main program is in the MVC pattern.The Model is used to keep the information about Calendar, Events, Client and Alarms. The Controller deals with modification of the model, e.g. synchronize and share events. The view consist of our main view and our forms, these forms are used by the client to input information that the controller then saves in the model or database.
+When we want to synchronize our Calendar we need to connect to the database, here is where the strategy pattern comes in. The Strategy pattern observes whether we have a connection to the internet or not. Then the information will be sent on to the bridge pattern. By now we know which kind of storage we would like to use. When the right one is selected the storage will be built by our factory pattern. 
+Furthermore we have implemented the adapter pattern, this has an outgoing connection from google calendar. The information that the google calendar wants to extract will then be sent to the ICalendarEntry and further on to the right adapter that will handle the transformation to our system. 
+We have also implemented Composite pattern but it is a very weak implementation because we do not think that it has any relevance in our program. We already had the repeat event implemented in our own system. The composite pattern has a connection to the events in our model. The composite pattern is used for repeating events.
+\newline
+The UML Class diagram is on next page.
+
+\begin{sidewaysfigure}[ht!]
+\centering
+\includegraphics[width=210mm]{class.png}
+\caption{UML Class diagram \label{overflow}}
+\end{sidewaysfigure}
+
+
+\clearpage
 \section*{Subsystem decomposition}
 The subsystem CalendarManagement is the system where most of the program is placed. This system is responsible for all the local events happening in the system. This means that it would handle creation of the calendar, events and provide the necessary GUI for the local program. 
 
@@ -82,6 +139,194 @@ The subsystem SyncManagement is where we keep our calendars up to date, where we
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{diagram.png}
+\end{figure}
+
+
+\newpage
+\section*{Hardware/software mapping}
+
+Our Calendar system is run by two devices. The user program run on the user computer, and the synchronized parts will be on the server together with our share system. The two devices will have a connection to each other, we have not yet decided which kind of connection it would be.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=160mm]{UMLDeployment.png}
+\caption{UML Deployment diagram \label{overflow}}
+\end{figure}
+
+Now that we have mapped our program to the hardware that is used to run our system we dicoverred that some informations had to be handled between the computer and the server. Therefore we have made up a Component Diagram with the subsystems. If we study the ‘ManagingSubSystem’ the ‘SyncSubSystem’ and the ‘ShareSubSystem’, we find that they all have instances of the same classes. This information kept in these instances has to be transfered from the computer to the server via a network connection. Here commes the ‘ControlSubSystem’ in play, this is our subsystem that handles the information and connection between the ‘SyncSubSystem’ and the ‘ManagingSubSystem. The last subsystem ‘CommunicationSubSystem’ will handle the connection to the ‘ShareSubSystem’
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=160mm]{UMLComponent.png}
+\caption{UML Component diagram \label{overflow}}
+\end{figure}
+
+
+\clearpage
+\section*{Persistent data management}
+\subsection{Persistent data}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=160mm]{UMLComponentData.png}
+\caption{Subsystem decomposition with data stores (UML Component diagram) \label{overflow}}
+\end{figure}
+
+\textbf{LocalStoreSubsystem} is responsible for storing the data from the calendar on the computer. This functionality is used before the system is synchronized. When synchronized, the data is stored in DBStorageSubsystem, and the data in LocalStoreSubsystem is deleted. 
+
+\textbf{DBStorageSubsystem} is responsible for storing all data from ManageSubsystem in a database for the server. 
+
+
+\subsection*{Selecting strategy}
+\begin{itemize}
+	\item In the LocalStoreSubsystem the data is stored as flat files in plain text. 
+	\item Data in DBStorageSubsystem is stored in af Relational Database. 
+\end{itemize}
+
+\clearpage
+\section*{Access control and security}
+
+In fact that our program have multiple users it good to clarify what functions that are available for the different users in the three states a Calendar can be. The three states that our calendar can be in is.
+
+\begin{itemize}
+	\item The Global: This Calendar is visible to all users, that subscribe, but it can only be edited by the Client that made the Calendar.
+	\item The Local: This Calendar is the one that the Client have shared with his friends, family og coworkers. Both the Client and the subscribing clients have the opportunity see and edit events. The Client that created the Calendar, off course as the only one has the possibility to delete the Calendar.
+	\item The Account: The Calendar that can only be seen and edited by the Client that it was created by. 
+\end{itemize}
+
+With those informations in the back of our head we made an Access Matrix to get a better view of our Objects Actors functions or method calls available at the different states of a Calendar. 
+
+\begin{tabular}{|p{2.9cm}|p{3.6cm}|p{3.6cm}|p{3.6cm}|}
+\hline
+\textbf{Object Actors}
+&
+\textbf{Global}
+&
+\textbf{Local}
+&
+\textbf{Account} \\
+\hline
+\textbf{Client}
+& 
+\begin{itemize}
+\item getCalender() 
+\item setCalender() 
+\item getEvent()
+\item setEvent()
+\item unsubscribe()
+\item getUser()
+\item save()
+\item delete()
+\end{itemize} 
+& 
+\begin{itemize}
+\item getCalender() 
+\item setCalender() 
+\item getEvent() 
+\item setEvent()
+\item unsubscribe()
+\item getUser()
+\item save()
+\item delete()
+\end{itemize} 
+&
+\begin{itemize}
+\item getCalender() 
+\item setCalender() 
+\item getEvent() 
+\item setEvent()
+\item unsubscribe()
+\item getUser()
+\item save()
+\item delete()
+\end{itemize} 
+ \\ \hline
+\textbf{Server}
+& 
+\begin{itemize}
+\item update()
+\end{itemize} 
+& 
+\begin{itemize}
+\item update()
+\end{itemize} 
+&
+\begin{itemize}
+\item update()
+\end{itemize} 
+ \\ \hline
+\textbf{Subscribing Client}
+& 
+\begin{itemize}
+\item getCal()
+\item getEvent()
+\end{itemize} 
+& 
+\begin{itemize}
+\item getCal()
+\item setCal() 
+\item getEvent()
+\item setEvent()
+\item unsubscribe()
+\item getusers()
+\item save()
+\end{itemize}
+&
+No subscribing clients
+ \\ \hline
+\end{tabular}
+
+\newpage
+\section*{Global software control}
+
+In OOSE section 7.4.4 there is mentioned three types of control flow paradigms. 
+
+\begin{itemize}
+	\item Procedure-driven control: Operations will wait for an input from actor whenever data is needed. 
+	\item Event-driven control: The control flow is determined by events.
+	\item Threads: This is a concurrent version of procedure-driven control.
+\end{itemize}
+
+ Below is a UML sequence diagram for creating and sharing a calendar:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=160mm]{UMLSequenceCalendar.png}
+\caption{UML Sequence diagram for creating and sharing a calendar \label{overflow}}
+\end{figure}
+
+ Events determines the control flow of the system. The design of the control flow will be event-driven. 
+
+\newpage
+\section*{Boundary conditions}
+\textbf{Start program}
+To start the program you must be on a computer with the program on it. Then you just have to run the file. If you want the program to have the full functionality at synchronize the calendar, you must have a network connection. 
+\newline
+\newline
+\textbf{Shutdown program}
+To shut down the program you must be in the program, and be able to click on the lock down button. 
+We have also clarified some boundary use cases that we have put in our use case diagram, to handle some different boundary exceptions. 
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=160mm]{usecase.png}
+\caption{Updated UML Use Case diagram with  boundary conditions \label{overflow}}
+\end{figure}
+
+
+\newpage
+\chapter*{Subsystem services}
+
+\begin{itemize}
+	\item ConnectionManager allows a subsystem to register with the CommunicationSubsystem and ControlSubsystem and communicate.
+	\item CalculatorRequester allows a subsystem to request a list of available calendars selected trips.
+	\item CalendarProvider allows a subsystem to provide a list of calendar that are available for the client and the subscribing clients. 
+\end{itemize}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=160mm]{UMLComponentService.png}
+\caption{Subsystem decomposition with services (UML Component diagram) \label{overflow}}
 \end{figure}
 
 \end{document}
