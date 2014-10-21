@@ -4,6 +4,9 @@
 
 \part*{System Design Document}
 
+\begin{versionhistory}
+  \vhEntry{1.0}{21.10.14}{anud|ntho|sjri}{Revision}
+\end{versionhistory}
 
 \chapter*{Introduction}
 
@@ -14,50 +17,6 @@
 \paragraph{Response time: } The Calendar system should be quite responsive to user input, and commonly make actions in a matter of milliseconds. 
 
 \paragraph{Extensibility: } The Calendar system should support the opportunity to extend the program and make it interact with different calendar programs such as Google Calendar, Exchange and iCal. 
-
-\subsubsection{Non-functional requirements}
-\paragraph{Usaility}
-\begin{itemize}
-	\item The user should have basic experience using computers.
-	\item The user should be familiar with popular OS interfaces, e.g. Windows 7 or 8.
-	\item The user should be able to use the system without little or no documentation.
-\end{itemize}
-
-\paragraph{Reliability}
-\begin{itemize}
-	\item It is important that the Calendars are synchronized.
-	\item Restarting of the system is acceptable in the event of a failure.
-	\item The system may lost at most five of the last changes made by the user in the event of failure.
-\end{itemize}
-
-\newpage
-\paragraph{Performance}
-\begin{itemize}
-	\item The system should be responsive. There should be little to no latency during actions.
-	\item Server synchronization should take no longer than 1-2 minutes on an average home internet connection.
-	\item The system should support different user accounts on a computer.
-\end{itemize}
-
-\paragraph{Supportability}
-\begin{itemize}
-	\item Extensions could be the support of other types of Calendar systems, such as GMail, Yahoo Mail etc
-\end{itemize}
-
-\paragraph{Implementation}
-\begin{itemize}
-	\item Internet connection is needed for synchronizing with the server. If no internet connection is available the data is only stored locally.
-	\item The data is saved locally and on the server.
-\end{itemize}
-
-\paragraph{Operation}
-\begin{itemize}
-	\item The user manages the system.
-\end{itemize}
-
-\paragraph{Package}
-\begin{itemize}
-	\item The system is installed by the user.
-\end{itemize}
 
 %\section*{Overview}
 
