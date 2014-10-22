@@ -11,4 +11,8 @@
  & 22.10.14
  & \listset {ntho|sjri}
  & Revision: Added more design goals: Low operating cost, Scalability, High Availability\\
+1.02
+ & 22.10.14
+ & \listset {ntho|sjri}
+ & Revision: Updated the access control matrix: Removed the objects Global, Local and Account and replaced them with Entity objects found in the RAD document. \newline Renamed the Client actors to User as it seemed more intuitive\\
 \end {longtable}
