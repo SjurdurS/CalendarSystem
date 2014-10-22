@@ -7,4 +7,8 @@
  & 21.10.14
  & \listset {anud|ntho|sjri}
  & Revision: Restructed the LaTeX documents.\\
+1.01
+ & 22.10.14
+ & \listset {anud|ntho|sjri}
+ & Revision: Renamed the Entity object "OtherUser" to "SubscribingUser" and renamed the "Client" actor to "User"\\
 \end {longtable}
