@@ -8,84 +8,70 @@ In fact that our program have multiple users it good to clarify what functions t
 	\item The Account: The Calendar that can only be seen and edited by the Client that it was created by. 
 \end{itemize}
 
-With those informations in the back of our head we made an Access Matrix to get a better view of our Objects Actors functions or method calls available at the different states of a Calendar. 
+With those informations in the back of our head we made an Access Matrix to get a better view of our Objects Actors functions or method calls available at the different states of a Calendar.\newline
 
-\begin{tabular}{|p{2.9cm}|p{3.6cm}|p{3.6cm}|p{3.6cm}|}
+\begin{figure}[hbp]
+\hspace*{-1.5cm}\begin{tabular}{|p{1.8cm}|p{1.6cm}|p{3.7cm}|p{3.7cm}|p{2.2cm}|p{2.6cm}|}
 \hline
 \textbf{Object Actors}
 &
-\textbf{Global}
-&
-\textbf{Local}
-&
-\textbf{Account} \\
-\hline
 \textbf{Client}
-& 
-\begin{itemize}
-\item getCalender() 
-\item setCalender() 
-\item getEvent()
-\item setEvent()
-\item unsubscribe()
-\item getUser()
-\item save()
-\item delete()
-\end{itemize} 
-& 
-\begin{itemize}
-\item getCalender() 
-\item setCalender() 
-\item getEvent() 
-\item setEvent()
-\item unsubscribe()
-\item getUser()
-\item save()
-\item delete()
-\end{itemize} 
 &
-\begin{itemize}
-\item getCalender() 
-\item setCalender() 
-\item getEvent() 
-\item setEvent()
-\item unsubscribe()
-\item getUser()
-\item save()
-\item delete()
-\end{itemize} 
+\textbf{Calendar}
+&
+\textbf{Event}
+&
+\textbf{\mbox{Subscribing} User}
+&
+\textbf{Alarm} \\
+\hline
+\textbf{User}
+& 
+edit() \newline
+delete() \newline
+& 
+getCalender()  \newline
+setCalender()  \newline
+subscribe() \newline
+unsubscribe() \newline
+getSubscribedUsers() \newline
+save() \newline
+delete() \newline
+&
+getEvent()  \newline
+setEvent() \newline
+subscribe() \newline
+unsubscribe() \newline
+getSubscribedUsers() \newline
+save() \newline
+delete() \newline
+&
+&
+getAlarm()  \newline
+setAlarm() \newline
+removeAlarm() \newline
  \\ \hline
 \textbf{Server}
 & 
-\begin{itemize}
-\item update()
-\end{itemize} 
 & 
-\begin{itemize}
-\item update()
-\end{itemize} 
+synchronize() \newline
 &
-\begin{itemize}
-\item update()
-\end{itemize} 
+&
+&
  \\ \hline
-\textbf{Subscribing Client}
+\textbf{Other User}
 & 
-\begin{itemize}
-\item getCal()
-\item getEvent()
-\end{itemize} 
 & 
-\begin{itemize}
-\item getCal()
-\item setCal() 
-\item getEvent()
-\item setEvent()
-\item unsubscribe()
-\item getusers()
-\item save()
-\end{itemize}
-&
-No subscribing clients
+requestEditAccess()  \newline
+subscribe()   \newline
+unsubscribe() \newline
+& 
+requestEditAccess()  \newline
+subscribe()  \newline
+unsubscribe() \newline
+& 
+& 
  \\ \hline
 \end{tabular}
+\caption{\label{fig:text}Assess control matrix}
+\end{figure}
