@@ -1,0 +1,18 @@
+\newpage
+
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Control Object} & \textbf{Definition} \\ \hline
+CalendarControl & 
+Manages the reporting function for whenever a \textbf{calendar} is created, edited og removed. 
+When a \textbf{calendar} is created, edited or removed the CalendarControl creates a CalendarForm and present it to the \textbf{CLIENT}. It then creates a ShareForm and present it to the \textbf{CLIENT}. It submits the forms and then waits for the \textbf{SERVER} to automatically update( or if the \textbf{CLIENT} synchronizes). The UpdateControl takes over from here. \\ \hline
+EventControl & 
+Manages the reporting function for whenever an \textbf{event} is created, edited, or removed. 
+When an \textbf{event} is created, edited or removed the EventControl creates a EventForm and present it to the \textbf{CLIENT}. It then creates a ShareForm and present it to the \textbf{CLIENT}. It submits the forms and then waits for the \textbf{SERVER} to automatically update( or if the \textbf{CLIENT} synchronizes). The UpdateControl takes over from here. \\ \hline
+UpdateControl & 
+Manages updates and synchronizations. When a form is submitted the UpdateControl takes over. It waits for the \textbf{SERVER} to automatically update or if the user manually synchronizes. 
+When the \textbf{SERVER} updates the \textbf{calendar} the UpdateControl creates a SynchronizedNotice and displays it to the \textbf{CLIENT}. \\ \hline
+NotifyUserControl & 
+Manages invitation notices and replies. 
+If a \textbf{calendar} or \textbf{event} is shared the NotifyUserControl creates an InviteNotice when the system updates. It sends the InviteNotice and creates a InviteReply and waits for the \textbf{OtherUser}?s reply. When the \textbf{OtherUser} give a reply it is displayed to the \textbf{CLIENT}. \\ \hline
+\end{tabular}

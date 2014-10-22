@@ -1,0 +1,41 @@
+\begin{tabular}{|l|p{5.3cm}|p{5.3cm}|}
+\hline
+\multicolumn{3}{|c|}{Identifying Entity Objects} \\
+\hline
+\textbf{Entity Object} & \textbf{Attributes \& Associations} & \textbf{Definitions} \\
+\hline
+ Client & 
+\begin{itemize}
+     \item UserName
+\end{itemize} &
+The actor of the system. He administrates the Calendars and Events in the system. \\ \hline
+Calendar & 
+\begin{itemize}
+	\item Name
+	\item SharedGroup
+	\item Color
+  \end{itemize} & 
+A Calendar is a system used to keep track of events, e.g. Work calendar or Holiday calendar. The Calendar contains events specific to only itself. The system can contain multiple calendars.\\ \hline
+Event &
+\begin{itemize}
+	\item Name
+	\item SharedGroup
+	\item Color
+	\item StartDateTime
+	\item EndDateTime
+	\item Alarm
+	\item Place
+	\item Description
+\end{itemize} &
+An Event is an event belonging to only one Calendar. Events are used to set alarms or reminders. \\ \hline
+OtherUser & 
+\begin{itemize} 
+	\item UserName 
+\end{itemize} & 
+The actor who receives invitations. He has rights to the other client?s calendar. \\ \hline
+Alarm &
+\begin{itemize} 
+	\item Type
+\end{itemize} &
+Alarm notify the client within a given amount of time before the event start.  \\ \hline
+\end{tabular}
