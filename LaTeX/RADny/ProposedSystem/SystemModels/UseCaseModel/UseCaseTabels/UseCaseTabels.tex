@@ -1,0 +1,93 @@
+\subsubsection{Use case tables}
+
+\begin{usecase}
+
+\addtitle{Use case name}{Create a repeating event } 
+
+\addfield{Participating Actors:}{Initiated by Client \newline Communicates with Server}
+
+\addscenario{Flow of events:}{
+	\item The CLIENT creates a new event
+	\item The CLIENT Fills out event form
+	\item The CLIENT Clicks repeat
+	\item The CLIENT Selects interval
+	\item The CLIENT Saves Event. \newline - SERVER Synchronizes calendar
+}
+
+\additemizedfield{Entry \mbox{conditions:}}{
+	\item Calendar must exist in the CLIENT?s user profile
+}
+
+\additemizedfield{Exit \mbox{conditions:}}{
+	\item Event must have been saved by the CLIENT
+	\item Calendar must be synchronized with the SERVER
+}
+
+\caption{Use case tabel 1 \label{overflow}}
+\end{usecase}
+
+\pagebreak
+
+\begin{usecase}
+
+\addtitle{Use case name}{Share an existing event with another user} 
+
+\addfield{Participating Actors:}{Initiated by Client \newline Communicates with Server and Other_User}
+
+\addscenario{Flow of events:}{
+	\item The CLIENT chooses an event.
+	\item The CLIENT clicks Edit Event button
+	\item The CLIENT clicks on the SHARE button.
+	\item The CLIENT enters the username or email of another user he would like to share his event with.
+	\item The CLIENT clicks the SEND button.
+	\newline - The SERVER sends an invitation to the OTHER_USER.
+	\newline - The SERVER sends a notification ?Event shared? to the CLIENT.
+	\item The CLIENT reads the notification from the SERVER.
+	\item The CLIENT closes the notification.
+}
+
+\additemizedfield{Entry \mbox{conditions:}}{ % mbox to force the word no to break over several lines
+	\item The CLIENT must have an existing event.
+	\item The CLIENT must be connected to the internet.
+	\item The CLIENT must know the email or username of the recipient. 
+
+}
+
+\additemizedfield{Exit \mbox{conditions:}}{
+	\item The OTHER_USER must have received the invitation. 
+}
+\caption{Use case tabel 2 \label{overflow}}
+\end{usecase}
+
+\pagebreak
+
+\begin{usecase}
+
+\addtitle{Use case name}{Set two reminders on an existing event} 
+
+\addfield{Participating Actors:}{Initiated by Client \newline Communicates with Server}
+
+\addscenario{Flow of events:}{
+	\item The CLIENT chooses an event
+	\item The CLIENT clicks Edit Event button
+	\item The CLIENT clicks Set Reminder
+	\item The CLIENT selects two reminders
+	\item The CLIENT sets the time when the reminder should notify the client
+	\item The CLIENT chooses Reminder Type ?Email? for reminder 1 and   Reminder Type ?Notification? for reminder 2
+	\item The CLIENT saves the event
+	\item The SERVER sends an email to the CLIENT when the first reminder is fired
+	\item The SERVER notifies the CLIENT when the second reminder is fired
+
+}
+
+\additemizedfield{Entry \mbox{conditions:}}{
+	\item The CLIENT must have a calendar with a future existing event
+	\item The CLIENT must have a live connection to the internet
+
+}
+
+\additemizedfield{Exit \mbox{conditions:}}{
+	\item The CLIENT must be able to add reminders to an event
+}
+\caption{Use case tabel 3 \label{overflow}}
+\end{usecase}
