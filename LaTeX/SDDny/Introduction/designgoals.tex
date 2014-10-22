@@ -1,7 +1,19 @@
 \section{Design goals}
 
-\paragraph{Usability: } The Calendar system should be designed with the goal in mind that it should be fairly easy to use by the Client. 
+\paragraph{Low operating cost}\mbox{}\newline % Trick for newline otherwise you get "No line to end here"
+To minimize the need for advertisement, the cost of running the system should be minimized. This also leads us to select free or open-source components.
 
-\paragraph{Response time: } The Calendar system should be quite responsive to user input, and commonly make actions in a matter of milliseconds. 
+\paragraph{High availability}\mbox{}\newline
+Unexpected crashes and interruptions of the system can lead to a lot of frustration for the user. Therefore if the system should crash the data should not be lost. The system should do live synchronization with the server and the local storage.
 
-\paragraph{Extensibility: } The Calendar system should support the opportunity to extend the program and make it interact with different calendar programs such as Google Calendar, Exchange and iCal. 
+\paragraph{Usability}\mbox{}\newline
+The Calendar system should be designed with the goal in mind that it should be fairly easy to use by the Client. 
+
+\paragraph{Response time}\mbox{}\newline
+The Calendar system should be quite responsive to user input, and commonly make actions in a matter of milliseconds. 
+
+\paragraph{Extensibility}\mbox{}\newline
+The Calendar system should support the opportunity to extend the program and make it interact with different calendar programs such as Google Calendar, Exchange and iCal. 
+
+\paragraph{Scalability}\mbox{}\newline
+Scalability in terms of number of calendars and events. The response time of the system should not degrade with the number of calendars or events. 

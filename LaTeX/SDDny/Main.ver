@@ -15,4 +15,8 @@
  & 22.10.14
  & \listset {ntho|sjri}
  & Revision: Updated the access control matrix: Removed the objects Global, Local and Account and replaced them with Entity objects found in the RAD document. \newline Renamed the Client actors to User as it seemed more intuitive\\
+1.02
+ & 22.10.14
+ & \listset {anud}
+ & Revision: Updated Subsystem decomposition, Hardware/Software mapping and Persistent data management: Coherent subsystem names. Removed syncManagement and shareManagement. Removed Component Diagram 0.3 and replaced Component Diagram in subsystem decomposition with Component Diagram 0.4\\
 \end {longtable}
