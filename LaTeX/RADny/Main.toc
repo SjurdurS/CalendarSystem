@@ -19,4 +19,5 @@
 \contentsline {subsection}{\numberline {3.4.3}Analysis Object model}{13}{subsection.3.4.3}
 \contentsline {subsubsection}{Identifying Entity, Boundary, and Control objects}{13}{section*.21}
 \contentsline {paragraph}{Association Class Diagram}{16}{section*.22}
-\contentsline {chapter}{\chapternumberline {4}Glossary}{18}{chapter.4}
+\contentsline {subsection}{\numberline {3.4.4}Dynamic model}{18}{subsection.3.4.4}
+\contentsline {chapter}{\chapternumberline {4}Glossary}{23}{chapter.4}
