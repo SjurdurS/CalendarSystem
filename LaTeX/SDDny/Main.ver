@@ -7,4 +7,8 @@
  & 21.10.14
  & \listset {anud|ntho|sjri}
  & Revision: Removed non-functional requirements from Design goals. Updated component diagrams. More coherent.\\
+1.01
+ & 22.10.14
+ & \listset {ntho|sjri}
+ & Revision: Added more design goals: Low operating cost, Scalability, High Availability\\
 \end {longtable}
