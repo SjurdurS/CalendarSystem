@@ -17,6 +17,8 @@ Offline mode is a state the system goes in, when it cannot connect to the intern
 	\item \textbf{SyncFail:} Extends NetworkFail. If the network fails, the calendar and events cannot be synchronized and saved in the Database. The system will go offline, and save data locally, and try to sync, when a connection is established.
 	\item \textbf{DBConnectionFail:} Is extended by the Server. The system has a working network connection but the system cannot connect to the Server. 
 \end{itemize}
+The handling of most persistent objects is already described in the use cases during analysis, and in the access control matrix (figure \ref{fig:AccessControlMatrix}) 
+Hence we identify new boundary use cases. We have included six new use cases to our use case diagram with is represented in the RAD (section 3.4.2). 
 
 
 \begin{figure}[h]
