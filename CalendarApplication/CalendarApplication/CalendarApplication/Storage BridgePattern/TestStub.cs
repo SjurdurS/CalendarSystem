@@ -1,6 +1,0 @@
-﻿namespace CalendarApplication
-{
-    class TestStub
-    {
-    }
-}

@@ -1,0 +1,6 @@
+﻿namespace eCal
+{
+    class TestStub
+    {
+    }
+}

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BED411D-0300-498C-A37D-9E37840337F7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eCal</RootNamespace>
+    <AssemblyName>eCal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory\ConcreteFactoryDatabaseStorage.cs" />
+    <Compile Include="AbstractFactory\ConcreteFactoryFileStorage.cs" />
+    <Compile Include="AbstractFactory\ConcreteFactoryTestStub.cs" />
+    <Compile Include="AbstractFactory\FactoryMaker.cs" />
+    <Compile Include="AdapterPattern\GoogleAdapter.cs" />
+    <Compile Include="AdapterPattern\ICalendarEntry.cs" />
+    <Compile Include="Command Pattern\ICommand.cs" />
+    <Compile Include="Command Pattern\TransactionCommand.cs" />
+    <Compile Include="Composite Pattern\Composite.cs" />
+    <Compile Include="Composite Pattern\IEvent.cs" />
+    <Compile Include="Sync StrategyPattern\ISynchronizationStrategy.cs" />
+    <Compile Include="Model\Alarm.cs" />
+    <Compile Include="Model\Calendar.cs" />
+    <Compile Include="Controller\CalendarControl.cs" />
+    <Compile Include="Controller\EventControl.cs" />
+    <Compile Include="Controller\UpdateControl.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\Invitation.cs" />
+    <Compile Include="Model\Mail.cs" />
+    <Compile Include="Sync StrategyPattern\NetworkConnection.cs" />
+    <Compile Include="Sync StrategyPattern\OfflineSS.cs" />
+    <Compile Include="Sync StrategyPattern\OnlineSS.cs" />
+    <Compile Include="Sync StrategyPattern\OnOffManager.cs" />
+    <Compile Include="Storage BridgePattern\IPersistence.cs" />
+    <Compile Include="Storage BridgePattern\PersistenceImp.cs" />
+    <Compile Include="Storage BridgePattern\IPersistenceImplementor.cs" />
+    <Compile Include="Storage BridgePattern\FileStorage.cs" />
+    <Compile Include="Storage BridgePattern\IMailManager.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Controller\NotifyUserControl.cs" />
+    <Compile Include="Model\OtherUser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Storage BridgePattern\IStorage.cs" />
+    <Compile Include="Storage BridgePattern\RdbmsStorage.cs" />
+    <Compile Include="Storage BridgePattern\TestStub.cs" />
+    <Compile Include="View\CalendarForm.cs" />
+    <Compile Include="View\EventForm.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="View\NotificationDisplay.cs" />
+    <Compile Include="View\ShareForm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
