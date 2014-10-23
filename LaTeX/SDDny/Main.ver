@@ -22,5 +22,5 @@
 1.04
  & 23.10.14
  & \listset {ntho}
- & Revision: Updated access control text to the new matrix\\
+ & Revision: Updated access control text to the new matrix. \newline Renamed subsystem \textit {Calendar application} to \textit {Calendar Management}\\
 \end {longtable}
