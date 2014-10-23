@@ -1,7 +1,7 @@
 \section{Subsystem decomposition}
-The subsystem CalendarApplication is the system where most of the program is placed. This system is responsible for all the local events happening in the system. This means that it would handle creation of the calendar, events and provide the necessary GUI for the local program. 
+The subsystem CalendarManagement is the system where most of the program is placed. This system is responsible for all the local events happening in the system. This means that it would handle creation of the calendar, events and provide the necessary GUI for the local program. 
 
-This subsystem has two connections outside the subsystem itself. The first one goes to "ShareInterface" that has all the necessary functions that the CalendarApplication system could ask for when it is about to share a calendar or an event. The other outgoing connection is to the SyncInterface. This is an interface that holds all the needed method calls to synchronize the calendar.
+This subsystem has two connections outside the subsystem itself. The first one goes to "ShareInterface" that has all the necessary functions that the CalendarManagement system could ask for when it is about to share a calendar or an event. The other outgoing connection is to the SyncInterface. This is an interface that holds all the needed method calls to synchronize the calendar.
 \newline
 \newline
 The ShareInterface has to do with sending the information to the right people and using the right systems. The reason why we made this an interface is that it has been a commonly thing to share through facebook and other social media platforms. Therefore it would be nice to easily have the opportunity to extend the share option so that it would support e.g. Facebook. 
