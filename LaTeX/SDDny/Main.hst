@@ -1,7 +1,3 @@
 \def \vhCurrentVersion {1.04}
 \def \vhCurrentDate {23.10.14}
-<<<<<<< HEAD
 \newsetsimple \vhAllAuthorsSet {\mbox {anud}|\mbox {sjri}|anud|ntho|sjri}
-=======
-\newsetsimple \vhAllAuthorsSet {anud|ntho|ntho, sjri, anud|sjri}
->>>>>>> d26dbe5841bd5144cf96edf23a65fc4ef2640ecb
