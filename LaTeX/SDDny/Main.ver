@@ -5,7 +5,7 @@
  & \textbf {\vhchangename }\\[1ex]
 1.0
  & 21.10.14
- & \listset {anud|ntho|sjri}
+ & \listset {anud|ntho|\mbox {sjri}}
  & Revision: Removed non-functional requirements from Design goals. Updated component diagrams. More coherent.\\
 1.01
  & 22.10.14
@@ -21,6 +21,6 @@
  & Revision: Updated Subsystem decomposition, Hardware/Software mapping and Persistent data management: Coherent subsystem names. Removed syncManagement and shareManagement. Removed Component Diagram 0.3 and replaced Component Diagram in subsystem decomposition with Component Diagram 0.4\\
 1.04
  & 23.10.14
- & \listset {ntho}
+ & \listset {ntho|sjri|\mbox {anud}}
  & Revision: Updated access control text to the new matrix. \newline Renamed subsystem \textit {Calendar application} to \textit {Calendar Management}\\
 \end {longtable}
