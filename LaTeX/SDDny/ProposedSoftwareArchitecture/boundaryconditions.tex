@@ -6,6 +6,17 @@ To start the program you must be on a computer with the program on it. Then you 
 \textbf{Shutdown program}
 To shut down the program you must be in the program, and be able to click on the lock down button. 
 We have also clarified some boundary use cases that we have put in our use case diagram, to handle some different boundary exceptions. 
+\newline
+\newline
+\textbf{Offline Mode}
+Offline mode is a state the system goes in, when it cannot connect to the internet. It limits the system to save changes locally. 
+
+\textbf{Failures}
+\begin{itemize}
+	\item \textbf{ShareFail:} Extends NetworkFail. If the network fails, the calendar and events cannot be shared. The system will then go offline, and try sharing again, when a connection is established. 
+	\item \textbf{SyncFail:} Extends NetworkFail. If the network fails, the calendar and events cannot be synchronized and saved in the Database. The system will go offline, and save data locally, and try to sync, when a connection is established.
+	\item \textbf{DBConnectionFail:} Is extended by the Server. The system has a working network connection but the system cannot connect to the Server. 
+\end{itemize}
 
 
 \begin{figure}[h]
