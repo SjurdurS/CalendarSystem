@@ -1,14 +1,8 @@
 \section{Access control and security}
 
-In fact that our program have multiple users it good to clarify what functions that are available for the different users in the three states a Calendar can be. The three states that our calendar can be in is.
-
-\begin{itemize}
-	\item The Global: This Calendar is visible to all users, that subscribe, but it can only be edited by the Client that made the Calendar.
-	\item The Local: This Calendar is the one that the Client have shared with his friends, family og coworkers. Both the Client and the subscribing clients have the opportunity see and edit events. The Client that created the Calendar, off course as the only one has the possibility to delete the Calendar.
-	\item The Account: The Calendar that can only be seen and edited by the Client that it was created by. 
-\end{itemize}
-
-With those informations in the back of our head we made an Access Matrix to get a better view of our Objects Actors functions or method calls available at the different states of a Calendar.\newline
+The Calendar aplication is a multiple user system, different actors are allowed to view different sets of objects, and invoke different types of operations on them. To document the different users access rights, we made an access control matrix (figure \ref{fig:AccessControlMatrix}). 
+In summary \(user\) can create \(calendars\), \(evants\) and \(alarms\). Beside that the user have the ability to edit the \(calendar\), \textit{events} and \textit{alarm}. The \textit{server} is only used to sychronize the \textit{calendar}. The \textit{other user}, is other users that locally on thier own \textit{calendars} have the same abilities as the \textit{user}. In this case the \textit{other user} only have the ability to subcribe, if the \(other user\) got an invite for the specific \textit{calendar}. And if not given, the other user can ask for permision to edit the \textit{calendar} or \textit{events}. \(Other user\), can of course also unsubsrcibe from the \textit{calendar} or \textit{event}.
+\newline
 
 \begin{figure}[hbp]
 \hspace*{-1.5cm}\begin{tabular}{|p{1.8cm}|p{1.6cm}|p{3.7cm}|p{3.7cm}|p{2.2cm}|p{2.6cm}|}
@@ -73,5 +67,5 @@ unsubscribe() \newline
 & 
  \\ \hline
 \end{tabular}
-\caption{\label{fig:text}Assess control matrix}
+\caption{\label{fig:AccessControlMatrix}Access control matrix}
 \end{figure}
