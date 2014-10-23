@@ -21,15 +21,10 @@
  & Revision: Updated Subsystem decomposition, Hardware/Software mapping and Persistent data management: Coherent subsystem names. Removed syncManagement and shareManagement. Removed Component Diagram 0.3 and replaced Component Diagram in subsystem decomposition with Component Diagram 0.4\\
 1.04
  & 23.10.14
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
->>>>>>> 342947818a90fe4b29fd1135a037b73f6a8fad39
  & \listset {ntho|sjri|\mbox {anud}}
  & Revision: Updated access control text to the new matrix. \newline Renamed subsystem \textit {Calendar application} to \textit {Calendar Management}\\
-=======
+1.04
+ & 23.10.14
  & \listset {ntho, sjri, anud}
  & Revision: Updated access control text to the new matrix. \newline Renamed subsystem \textit {Calendar application} to \textit {Calendar Management} \newline Updated text in Boundary conditions.\\
->>>>>>> Stashed changes
 \end {longtable}
