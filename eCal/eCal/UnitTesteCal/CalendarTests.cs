@@ -1,6 +1,4 @@
-﻿
-using eCal.Model;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTesteCal
 {
