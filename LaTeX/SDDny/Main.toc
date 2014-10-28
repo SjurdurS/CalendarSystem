@@ -11,11 +11,11 @@
 \contentsline {section}{\numberline {2.1}Overview}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Architectural style}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}UML Class diagram}{7}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Subsystem decomposition}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}Hardware/software mapping}{9}{section.2.3}
+\contentsline {section}{\numberline {2.2}Subsystem decomposition}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Hardware/software mapping}{10}{section.2.3}
 \contentsline {section}{\numberline {2.4}Persistent data management}{10}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Persistent data}{10}{subsection.2.4.1}
 \contentsline {section}{\numberline {2.5}Access control and security}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Global software control}{11}{section.2.6}
+\contentsline {section}{\numberline {2.6}Global software control}{12}{section.2.6}
 \contentsline {section}{\numberline {2.7}Boundary conditions}{12}{section.2.7}
 \contentsline {chapter}{\chapternumberline {3}Subsystem services}{14}{chapter.3}
