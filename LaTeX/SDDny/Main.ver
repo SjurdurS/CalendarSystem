@@ -23,4 +23,8 @@
  & 23.10.14
  & \listset {ntho, sjri, anud}
  & Revision: Updated access control text to the new matrix. \newline Renamed subsystem \textit {Calendar application} to \textit {Calendar Management} \newline Updated text in Boundary conditions.\\
+1.05
+ & 28.10.14
+ & \listset {ntho|anud}
+ & Updated UML Class diagram description. \newline Updated \textit {UML Class diagram}. \newline Updated \textit {Component diagram}. \newline Updated \textit {subsystem decomposition} description. \newline Updated \textit {Hardware/software mapping} description. \newline Updated \textit {Global software control} description\\
 \end {longtable}
