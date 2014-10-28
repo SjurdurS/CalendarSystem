@@ -1,9 +1,9 @@
-DET HELE SKAL LAVES OM HER!!!
+
 
 \begin{itemize}
-	\item ConnectionManager allows a subsystem to register with the CommunicationSubsystem and communicate.
-	\item CalculatorRequester allows a subsystem to request a list of available calendars and select among them.
-	\item CalendarProvider allows a subsystem to provide a list of calendar that are available for the client and the subscribing clients. 
+	\item \textit{CalendarMaagement}, sends requests to update the calendar. Besides that it provide invites to be sent on to the \textit{ShareSubsystem}. 
+	\item \textit{ShareSubsystem} sends request of wathever data the google client wants to the \textit{CalendarManagement}.
+	\item \textit{SyncSubsystem} The \textit{SyncSubsystem} the decides wich storage sould be used in terms of the network connection at the time it gets a request from \textit{CalendarManagement}.
 \end{itemize}
 
 \begin{figure}[ht!]
