@@ -12,6 +12,6 @@ In OOSE section 7.4.4 there is mentioned three types of control flow paradigms.
  
  \emph{CalendarManagement saves data locally through FileStorage.} When saving data locally it is procedure driven. Whenever FileStorage needs data it will wait for input from CalendarManagement.
  
- \emph{CommunicationManagement is the link between CalendarManagement and SyncInterface \& ShareInterface.} The control flow of the CommunicationManagement is event-driven.
+ \emph{CalendarManagement communicates with SyncSubsystem \& ShareSubsystem.} The control flow of the communication between the subsystems is event-driven.
  
- \emph{SyncInterface \& ShareInterface communicate through RDBMSStorage with the server.} The control flow of the RDBMSStorage is thread-driven since the subsystem both handles sharing with other users and synchronizing the local Calendars with the server. 
+ \emph{SyncSubsystem \& ShareSubsystem communicate through RDBMSStorage with the server}. The control flow of the \textit{RDBMSStorage} is thread-driven since the subsystem both handles sharing with other users and synchronizing the local \textit{Calendars} with the server. 
