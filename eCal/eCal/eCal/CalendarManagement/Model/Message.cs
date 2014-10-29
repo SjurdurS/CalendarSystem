@@ -6,9 +6,9 @@ namespace eCal.CalendarManagement.Model
     ///     This subclass of Alarm represents an alarm of type message.
     ///     The User recieves the message when the alarm sets.
     /// </summary>
-    internal class Message : Alarm // Extends Alarm
+    public  class Message
     {
-        public Message(DateTime dateTime, string text) : base(dateTime)
+        public Message(string text)
         {
             Text = text;
         }

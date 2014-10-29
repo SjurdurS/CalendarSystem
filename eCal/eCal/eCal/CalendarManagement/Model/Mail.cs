@@ -6,7 +6,7 @@ namespace eCal.CalendarManagement.Model
     /// This subclass represents an alarm of type Mail. 
     /// This mail should be sent when the alarm starts.
     /// </summary>
-    class Mail : Alarm // Extends Alarm
+    public class Mail
     {
         /// <summary>
         /// The subject of the mail.
@@ -30,7 +30,7 @@ namespace eCal.CalendarManagement.Model
         /// <param name="subject">The Subject of the email.</param>
         /// <param name="message">The message body of the mail.</param>
         /// <param name="address">The email address of the mail.</param>
-        public Mail(DateTime dateTime, string subject, string message, string address) : base(dateTime)
+        public Mail(string subject, string message, string address)
         {
             this.Subject = subject;
             this.Text = message;
