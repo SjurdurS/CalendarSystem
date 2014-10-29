@@ -18,9 +18,17 @@
 1.03
  & 22.10.14
  & \listset {anud}
- & Revision: Updated Subsystem decomposition, Hardware/Software mapping and Persistent data management: Coherent subsystem names. Removed syncManagement and shareManagement. Removed Component Diagram 0.3 and replaced Component Diagram in subsystem decomposition with Component Diagram 0.4\\
+ & Revision: Updated Subsystem decomposition, Hardware/Software mapping and Persistent data management: Coherent subsystem names. Removed \textit {syncManagement} and \textit {shareManagement}. Removed Component Diagram 0.3 and replaced Component Diagram in subsystem decomposition with Component Diagram 0.4\\
 1.04
  & 23.10.14
- & \listset {ntho|sjri|\mbox {anud}}
+ & \listset {ntho, sjri, anud}
  & Revision: Updated access control text to the new matrix. \newline Renamed subsystem \textit {Calendar application} to \textit {Calendar Management} \newline Updated text in Boundary conditions.\\
+1.05
+ & 28.10.14
+ & \listset {ntho|anud}
+ & Updated UML Class diagram description. \newline Updated UML Class diagram. \newline Updated Component diagram. \newline Updated subsystem decomposition description. \newline Updated Hardware/software mapping description. \newline Updated Global software control description. \newline Updated subsystem services description.\\
+1.1
+ & 29.10.14
+ & \listset {ntho}
+ & Cleanup and reformatting.\\
 \end {longtable}

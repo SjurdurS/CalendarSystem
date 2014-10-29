@@ -43,12 +43,16 @@ In our Object Oriented Analysis an Analysis Object Model was defined where we id
 The Analysis Object Model is a simplification of MVC pattern. It made it eaiser to set up the MVC pattern and build further on the Object Oriented Design. 
 
 \subsection{UML Class diagram}
-Our main program is in the MVC pattern.The Model is used to keep the information about Calendar, Events, Client and Alarms. The Controller deals with modification of the model, e.g. synchronize and share events. The view consist of our main view and our forms, these forms are used by the client to input information that the controller then saves in the model or database.
-When we want to synchronize our Calendar we need to connect to the database, here is where the strategy pattern comes in. The Strategy pattern observes whether we have a connection to the internet or not. Then the information will be sent on to the bridge pattern. By now we know which kind of storage we would like to use. When the right one is selected the storage will be built by our factory pattern. 
-Furthermore we have implemented the adapter pattern, this has an outgoing connection from google calendar. The information that the google calendar wants to extract will then be sent to the ICalendarEntry and further on to the right adapter that will handle the transformation to our system. 
-We have also implemented Composite pattern but it is a very weak implementation because we do not think that it has any relevance in our program. We already had the repeat event implemented in our own system. The composite pattern has a connection to the events in our model. The composite pattern is used for repeating events.
+Our main program is in the MVC pattern.The Model is used to keep the information about \textit{Calendar}, \textit{Events}, \textit{Client} and \textit{Alarms}. The \textit{Controller} deals with modification of the model, e.g. synchronize and share events. The view consist of our main view and our forms, these forms are used by the client to input information that the controller then saves in the model or database.
+When we want to synchronize our \textit{Calendar} we need to connect to the database, through our \textit{SyncSubsystem}, here is where the strategy pattern comes in. The strategy pattern observes whether we have a connection to the internet or not. Then the information will be sent on to the bridge pattern. By now we know which kind of storage we would like to use. When the right one is selected the storage will be built by our factory pattern. 
+Furthermore we have implemented the adapter pattern as an extension of our \textit{SyncSubsystem}, this has an outgoing connection from google calendar. The information that the google calendar wants to extract will then be sent to the \textit{ICalendarEntry} and further on to the right adapter that will handle the transformation to our system. 
+We have also implemented Composite pattern but it is a very weak implementation because we do not think that it has any relevance in our program. We already had the repeat event implemented in our own system. The Composite pattern has a connection to the events in our model. The Composite pattern is used for repeating events.
 \newline
-The UML Class diagram is on next page.
+The UML Class diagram shows our three subsystems and the connections between them. Whenever a user likes to synchronize his calendar, a connection from \textit{UpdateControl} in the \textit{CalendarManagementSubsystem} will set to \textit{NetworkConnection} in our \textit{SyncSubsystem}.
+The connection between our \textit{SyncSubsystem} and our \textit{CalendarManagementSubsystem} is between the interface \textit{IShare} and \textit{NotifyUserControl}. Wich is the controller that sends the invite out, and then the interface will handle it at the other end. Here is space for different share systems e.g. \textit{Facebook}. 
+\newline
+\newline
+The \textit{UML Class diagram} is on next page.
 
 \begin{sidewaysfigure}
 \centering
