@@ -156,3 +156,5 @@ $RECYCLE.BIN/
 .DS_Store
 LaTeX/RADny/Main.pdf
 LaTeX/SDDny/Main.pdf
+LaTeX/RADny/Main.aux
+LaTeX/RADny/Main.synctex.gz

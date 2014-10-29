@@ -97,7 +97,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SyncSubsystem\IStorage.cs" />
     <Compile Include="SyncSubsystem\RdbmsStorage.cs" />
     <Compile Include="SyncSubsystem\TestStub.cs" />
     <Compile Include="CalendarManagement\View\CalendarForm.cs" />
