@@ -1,28 +1,24 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTesteCal
 {
     /// <summary>
-    /// Testing the Client class.
+    ///     Testing the User class.
     /// </summary>
     [TestClass]
     public class ClientTests
     {
-  
         [TestMethod]
         public void Create_New_Client_Test1()
         {
             Assert.Fail("To do");
-        }  
+        }
 
         [TestMethod]
         public void Create_New_Client_Test2()
         {
             Assert.Fail("To do");
-        }  
+        }
 
         [TestMethod]
         public void Create_New_Client_Test3()
