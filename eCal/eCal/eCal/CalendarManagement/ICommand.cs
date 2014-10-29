@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eCal.Command_Pattern
+namespace eCal.CalendarManagement
 {
     /// <summary>
     /// The 'Command abstract class

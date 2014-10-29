@@ -1,4 +1,4 @@
-﻿namespace eCal
+﻿namespace eCal.SyncSubsystem
 {
     internal interface ISynchronizationStrategy
 
