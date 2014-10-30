@@ -1,10 +1,9 @@
-﻿namespace eCal.CalendarManagement.View
+﻿namespace CalendarApplication.View
 {
     /// <summary>
-    /// Displays a notification
+    ///     Displays a notification
     /// </summary>
-    class NotificationDisplay
+    internal class NotificationDisplay
     {
-
     }
 }

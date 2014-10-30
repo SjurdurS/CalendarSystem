@@ -1,46 +1,47 @@
 ﻿using System.Collections.Generic;
+using CalendarApplication.Model;
 
 namespace eCal.CalendarManagement.Model
 {
     /// <summary>
-    /// This class represents a Calendar in the system. A Calendar has a name and a list of Events.
+    ///     This class represents a Calendar in the system. A Calendar has a name and a list of Events.
     /// </summary>
     public class Calendar
     {
         /// <summary>
-        /// The name of the Calendar.
+        ///     Instantiate a new Calendar.
+        /// </summary>
+        public Calendar(string name, string color)
+        {
+            Name = name;
+            Color = color;
+            SharedGroup = new List<OtherUser>();
+            Events = new List<Event>();
+        }
+
+        /// <summary>
+        ///     The name of the Calendar.
         /// </summary>
         public string Name { get; set; }
-        
+
         /// <summary>
-        /// The Color of the Calendar. Used to color the calendar in the View.
+        ///     The Color of the Calendar. Used to color the calendar in the View.
         /// </summary>
         public string Color { get; set; }
 
         /// <summary>
-        /// The list of events assigned to this Calendar.
+        ///     The list of events assigned to this Calendar.
         /// </summary>
         public List<Event> Events { get; private set; }
 
         /// <summary>
-        /// List of users this Calendar is shared with.
+        ///     List of users this Calendar is shared with.
         /// </summary>
         public List<OtherUser> SharedGroup { get; private set; }
 
 
         /// <summary>
-        /// Instantiate a new Calendar.
-        /// </summary>
-        public Calendar(string name, string color)
-        {
-            this.Name = name;
-            this.Color = color;
-            this.SharedGroup = new List<OtherUser>();
-            this.Events = new List<Event>();
-        }
-
-        /// <summary>
-        /// Share the Calendar with another user.
+        ///     Share the Calendar with another user.
         /// </summary>
         /// <param name="otherUser">The recipient of the Calendar</param>
         public void Share(OtherUser otherUser)
@@ -49,35 +50,35 @@ namespace eCal.CalendarManagement.Model
         }
 
         /// <summary>
-        /// Add one event to the calendar.
+        ///     Add one event to the calendar.
         /// </summary>
         /// <param name="e">The event to add to the calendar.</param>
         public void AddEvent(Event ev)
         {
-            this.Events.Add(ev);
+            Events.Add(ev);
         }
 
         /// <summary>
-        /// Add a collection of events to the calendar.
+        ///     Add a collection of events to the calendar.
         /// </summary>
         /// <param name="events">The Events to add to the calendar.</param>
         public void AddEvents(List<Event> events)
         {
-            this.Events.AddRange(events);
+            Events.AddRange(events);
         }
 
         /// <summary>
-        /// Remove an event from the Calendar.
+        ///     Remove an event from the Calendar.
         /// </summary>
         /// <param name="ev">The event to remove.</param>
         /// <returns>Returns true if the event was successfully removed.</returns>
         public bool RemoveEvent(Event ev)
         {
-            return this.Events.Remove(ev);
+            return Events.Remove(ev);
         }
 
         /// <summary>
-        /// Remove a collection of Events from the calendar.
+        ///     Remove a collection of Events from the calendar.
         /// </summary>
         /// <param name="events">The collection of the events to remove.</param>
         public void RemoveEvents(List<Event> events)
@@ -89,23 +90,21 @@ namespace eCal.CalendarManagement.Model
         }
 
         /// <summary>
-        /// Remove this Calendar from a Client.
+        ///     Remove this Calendar from a User.
         /// </summary>
-        /// <param name="client">The Client to remove this Calendar from.</param>
-        public void RemoveFromClient(Client client)
+        /// <param name="user">The User to remove this Calendar from.</param>
+        public void RemoveFromClient(User user)
         {
-            client.RemoveCalendar(this);
+            user.RemoveCalendar(this);
         }
 
         /// <summary>
-        /// Add this Calendar to a Client.
+        ///     Add this Calendar to a User.
         /// </summary>
-        /// <param name="client">The Client to add this Calendar to.</param>
-        public void AddToClient(Client client)
+        /// <param name="user">The User to add this Calendar to.</param>
+        public void AddToClient(User user)
         {
-            client.AddCalendar(this);
+            user.AddCalendar(this);
         }
-
-
     }
 }
