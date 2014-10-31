@@ -12,7 +12,7 @@ namespace eCal.CalendarManagement.Controller
         /// Creates a CalendarForm in View.
         /// </summary>
         /// <returns></returns>
-        private CalendarForm CreatCalendarForm()
+        public CalendarForm CreatCalendarForm()
         {
             CalendarForm calendarForm = new CalendarForm();
             return calendarForm;
@@ -21,7 +21,7 @@ namespace eCal.CalendarManagement.Controller
         /// <summary>
         /// Takes a CalendarForm and creates a Calendar.
         /// </summary>
-        private Calendar CreateCalendar(CalendarForm calendarForm)
+        public Calendar CreateCalendar(CalendarForm calendarForm)
         {
             Calendar newCalendar = new Calendar();
             return newCalendar;
@@ -33,7 +33,7 @@ namespace eCal.CalendarManagement.Controller
         /// This method saves input from CalendarForm and link it to Calendar class 
         /// whenever there is clicked edit or save.
         /// </summary>
-        private void Save(CalendarForm calendarForm, Calendar calendar)
+        public void Save(CalendarForm calendarForm, Calendar calendar)
         {
         }
 
@@ -41,7 +41,7 @@ namespace eCal.CalendarManagement.Controller
         /// This method removes a calendar. When the Remove() method is called in CalendarForm 
         /// the controller links it to a remove method in the client list
         /// </summary>
-        private void Remove(Calendar calendar)
+        public void Remove(Calendar calendar)
         {       
         }
     }

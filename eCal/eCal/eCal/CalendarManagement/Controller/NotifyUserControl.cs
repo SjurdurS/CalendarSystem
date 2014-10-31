@@ -10,7 +10,7 @@ namespace eCal.CalendarManagement.Controller
         /// Creates a ShareForm in View.
         /// </summary>
         /// <returns></returns>
-        private ShareForm CreateShareForm()
+        public ShareForm CreateShareForm()
         {
             ShareForm shareForm = new ShareForm();
             return shareForm;
@@ -21,7 +21,7 @@ namespace eCal.CalendarManagement.Controller
         /// </summary>
         /// <param name="shareForm"></param>
         /// <returns></returns>
-        private List<Invitation> CreateInvite(ShareForm shareForm )
+        public List<Invitation> CreateInvite(ShareForm shareForm )
         {
             List<Invitation> invitations = new List<Invitation>();
             return invitations;
@@ -31,7 +31,7 @@ namespace eCal.CalendarManagement.Controller
         /// <summary>
         /// Shows and invitation as a notification. 
         /// </summary>
-        private Notification InviteNotification()
+        public Notification InviteNotification()
         {
         }
 
@@ -39,7 +39,7 @@ namespace eCal.CalendarManagement.Controller
         /// Shows a reply as a notification.
         /// </summary>
         /// <returns></returns>
-        private Notification ReplyNotification()
+        public Notification ReplyNotification()
         {   
         }
         
