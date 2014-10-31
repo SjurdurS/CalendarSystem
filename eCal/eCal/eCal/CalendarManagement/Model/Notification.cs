@@ -19,5 +19,9 @@
         {
             return null;
         }
+
+        public string UpdateMessage()
+        {
+        }
     }
 }

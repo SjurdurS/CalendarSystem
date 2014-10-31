@@ -21,11 +21,6 @@ namespace eCal.CalendarManagement.View
             this._Name = Name;
             this._ShareAddress = new List<string>();
         }
-
-        
-
-
-
     }
 
 }

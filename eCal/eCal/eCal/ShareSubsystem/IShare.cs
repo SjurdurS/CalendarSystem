@@ -9,7 +9,8 @@ namespace eCal.ShareSubsystem
 {
     interface IShare
     {
-        Notification Share();
-        
+        List<Notification> GetNotifications();
+
+        Notification ReceiveNotification();
     }
 }

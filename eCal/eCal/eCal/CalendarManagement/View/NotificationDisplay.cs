@@ -5,5 +5,6 @@
     /// </summary>
     internal class NotificationDisplay
     {
+        //put in box and GUI.
     }
 }

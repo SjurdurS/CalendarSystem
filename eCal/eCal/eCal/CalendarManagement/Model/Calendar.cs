@@ -22,7 +22,7 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The name of the Calendar.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; protected set; }
 
         /// <summary>
         ///     The Color of the Calendar. Used to color the calendar in the View.
@@ -44,7 +44,7 @@ namespace eCal.CalendarManagement.Model
         ///     Share the Calendar with another user.
         /// </summary>
         /// <param name="otherUser">The recipient of the Calendar</param>
-        public void Share(OtherUser otherUser)
+        private void Share(OtherUser otherUser)
         {
             // Share Calendar with another user.
         }
@@ -53,7 +53,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add one event to the calendar.
         /// </summary>
         /// <param name="e">The event to add to the calendar.</param>
-        public void AddEvent(Event ev)
+        private void AddEvent(Event ev)
         {
             Events.Add(ev);
         }
@@ -62,7 +62,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add a collection of events to the calendar.
         /// </summary>
         /// <param name="events">The Events to add to the calendar.</param>
-        public void AddEvents(List<Event> events)
+        private void AddEvents(List<Event> events)
         {
             Events.AddRange(events);
         }
@@ -72,7 +72,7 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         /// <param name="ev">The event to remove.</param>
         /// <returns>Returns true if the event was successfully removed.</returns>
-        public bool RemoveEvent(Event ev)
+        private bool RemoveEvent(Event ev)
         {
             return Events.Remove(ev);
         }
@@ -81,7 +81,7 @@ namespace eCal.CalendarManagement.Model
         ///     Remove a collection of Events from the calendar.
         /// </summary>
         /// <param name="events">The collection of the events to remove.</param>
-        public void RemoveEvents(List<Event> events)
+        private void RemoveEvents(List<Event> events)
         {
             foreach (Event ev in events)
             {
@@ -93,7 +93,7 @@ namespace eCal.CalendarManagement.Model
         ///     Remove this Calendar from a User.
         /// </summary>
         /// <param name="user">The User to remove this Calendar from.</param>
-        public void RemoveFromClient(User user)
+        private void RemoveFromClient(User user)
         {
             user.RemoveCalendar(this);
         }
@@ -102,7 +102,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add this Calendar to a User.
         /// </summary>
         /// <param name="user">The User to add this Calendar to.</param>
-        public void AddToClient(User user)
+        private void AddToClient(User user)
         {
             user.AddCalendar(this);
         }

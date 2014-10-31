@@ -8,27 +8,28 @@ namespace eCal.CalendarManagement.Controller
     /// </summary>
     internal class UpdateControl
     {
-        private List<Calendar> updateCalendar;
-        private List<Event> updateEvent;
-        private string status;
-
 
         /// <summary>
-        ///     Automatically synchronize the calendars with a given time interval.
+        ///    Takes a list of calendars and automatically synchronize the calendars with a given time interval.
         /// </summary>
-        public void AutoSync()
+        private void AutoSync(List<Calendar> updateCalendar)
         {
         }
 
         /// <summary>
         ///     Synchronize the calendars whenever the User clicks the synchronize button.
         /// </summary>
-        public void Sync()
+        private void Sync(List<Calendar> updateCalendar)
         {
         }
 
-        public void SyncStatus()
-        {   
+        /// <summary>
+        /// Returns the status of synchronization.
+        /// </summary>
+        /// <param name="status"></param>
+        private void SyncStatus(Notification notification)
+        {
+            notification.UpdateMessage();
         }
 
     }

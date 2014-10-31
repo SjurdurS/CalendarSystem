@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement.View
 {
@@ -6,7 +7,7 @@ namespace eCal.CalendarManagement.View
     {
         public string Name { get; set; }
         public string Color { get; set; }
-        public List<OtherUser> SharedGroup { get; private set; }
+        public List<User> SharedGroup { get; private set; }
 
         public CalendarForm()
         {
