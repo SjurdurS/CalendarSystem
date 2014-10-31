@@ -6,6 +6,8 @@ namespace eCal.CalendarManagement.Model
     /// This subclass represents an alarm of type Mail. 
     /// This mail should be sent when the alarm starts.
     /// </summary>
+    /// @invariant GetSubject() != null 
+    /// @invariant GetAddress() != null
     public class Mail
     {
         /// <summary>

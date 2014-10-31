@@ -6,6 +6,8 @@ namespace eCal.CalendarManagement.Model
     /// <summary>
     /// This class represents a client. A client can have one or more Calendars assigned.
     /// </summary>
+    /// @invariant GetUsername() != null 
+    /// @invariant GetEmailAddress() != null
     public class User
     {
         /// <summary>

@@ -41,8 +41,12 @@ namespace eCal.CalendarManagement.Controller
         /// This method removes a calendar. When the Remove() method is called in CalendarForm 
         /// the controller links it to a remove method in the client list
         /// </summary>
+        /// @pre Calendar c = calendar.GetType()
+        /// @pre calendar != null
+        /// @post calendar = null
+        /// @post user.GetCalendars().count_beforeRemove = user.GetCalendars().count_afterRemove
         public void Remove(Calendar calendar)
-        {       
+        {
         }
     }
 }

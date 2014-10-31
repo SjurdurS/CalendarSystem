@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace eCal.SyncSubsystem
 {
+    /// <summary>
+    /// Gets the available connection. Either offline or online.
+    /// </summary>
+    /// @invariant GetConnection() =! null
     internal class NetworkConnection
     {
         private List<Calendar> calendarsToUpdate;
@@ -13,7 +17,7 @@ namespace eCal.SyncSubsystem
         /// <summary>
         /// Gets an offline or online connection available. OnOffManager decides the connection type. 
         /// </summary>
-        public void GetConnection()
+        public ISynchronizationStrategy GetConnection()
         {
         }
 

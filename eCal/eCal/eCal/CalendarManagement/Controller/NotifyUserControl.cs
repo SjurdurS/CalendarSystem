@@ -17,14 +17,21 @@ namespace eCal.CalendarManagement.Controller
         }
 
         /// <summary>
-        /// Creates a ShareForm and returns a list of invitations. 
+        /// Creates a ShareForm and returns a list of invitations.
         /// </summary>
+        /// @pre ShareForm != null
+        /// @pre shareForm.ShareAddress.count >= 1
+        /// @post invitations.count >= 1
+        /// @post shareForm.ShareAddress.count == invitations.count
         /// <param name="shareForm"></param>
         /// <returns></returns>
         public List<Invitation> CreateInvite(ShareForm shareForm )
         {
             List<Invitation> invitations = new List<Invitation>();
             return invitations;
+            
+           
+            
         }
 
 
