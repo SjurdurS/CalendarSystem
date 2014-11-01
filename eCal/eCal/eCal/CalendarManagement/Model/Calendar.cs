@@ -14,7 +14,7 @@ namespace eCal.CalendarManagement.Model
         {
             Name = name;
             Color = color;
-            SharedGroup = new List<User>();
+            SharedGroup = new List<string>();
             Events = new List<Event>();
         }
 
@@ -34,9 +34,9 @@ namespace eCal.CalendarManagement.Model
         public List<Event> Events { get; set; }
 
         /// <summary>
-        ///     List of users this Calendar is shared with.
+        ///     List of users (addresses) this Calendar is shared with.
         /// </summary>
-        public List<User> SharedGroup { get; set; }
+        public List<string> SharedGroup { get; set; }
 
 
         /// <summary>
