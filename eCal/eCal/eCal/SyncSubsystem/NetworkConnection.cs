@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using eCal.CalendarManagement.Model;
 
 namespace eCal.SyncSubsystem
@@ -19,6 +20,7 @@ namespace eCal.SyncSubsystem
         /// </summary>
         public ISynchronizationStrategy GetConnection()
         {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -26,6 +28,7 @@ namespace eCal.SyncSubsystem
         /// </summary>
         public void Status()
         {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -33,6 +36,7 @@ namespace eCal.SyncSubsystem
         /// </summary>
         public void NetworkStorageInformation()
         {
+            throw new NotImplementedException();
         }
     }
 }

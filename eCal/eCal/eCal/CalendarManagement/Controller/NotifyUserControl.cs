@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using eCal.CalendarManagement.Model;
 using eCal.CalendarManagement.View;
 
@@ -37,6 +38,7 @@ namespace eCal.CalendarManagement.Controller
         /// </summary>
         public Notification InviteNotification()
         {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -45,6 +47,7 @@ namespace eCal.CalendarManagement.Controller
         /// <returns></returns>
         public Notification ReplyNotification()
         {
+            throw new NotImplementedException();
         }
     }
 }

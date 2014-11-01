@@ -1,9 +1,17 @@
-﻿namespace eCal.CalendarManagement.Model
+﻿using System;
+
+namespace eCal.CalendarManagement.Model
 {
     internal class Notification
     {
-        private Invitation invite;
-        private string reply;
+        private Invitation _invite;
+        private string _reply;
+
+        public Notification(Invitation invite, string reply)
+        {
+            _invite = invite;
+            _reply = reply;
+        }
 
         public Invitation SendInvite()
         {
@@ -22,6 +30,7 @@
 
         public string UpdateMessage()
         {
+            throw new NotImplementedException();
         }
     }
 }

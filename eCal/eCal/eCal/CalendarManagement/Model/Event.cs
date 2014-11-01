@@ -9,6 +9,12 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         /// <param name="name"></param>
         /// <param name="color"></param>
+        public Event()
+        {
+            Name = "Default Event Name";
+            Color = "Default Event Color";
+        }
+        
         public Event(string name, string color)
         {
             Name = name;
@@ -40,7 +46,7 @@ namespace eCal.CalendarManagement.Model
         ///     Share the Event with another user.
         /// </summary>
         /// <param name="otherUser">The other user to share the event with.</param>
-        public void Share(OtherUser otherUser)
+        public void Share(string otherUser)
         {
         }
 

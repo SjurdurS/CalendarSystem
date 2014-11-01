@@ -10,11 +10,19 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     Instantiate a new Calendar.
         /// </summary>
+        public Calendar()
+        {
+            Name = "Default Calendar Name";
+            Color = "Default Calendar Color";
+            SharedGroup = new List<string>();
+            Events = new List<Event>();
+        }
+        
         public Calendar(string name, string color)
         {
             Name = name;
             Color = color;
-            SharedGroup = new List<User>();
+            SharedGroup = new List<string>();
             Events = new List<Event>();
         }
 
@@ -31,12 +39,12 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The list of events assigned to this Calendar.
         /// </summary>
-        public List<Event> Events { get; set; }
+        public List<Event> Events { get; private set; }
 
         /// <summary>
-        ///     List of users this Calendar is shared with.
+        ///     List of users (addresses) this Calendar is shared with.
         /// </summary>
-        public List<User> SharedGroup { get; set; }
+        public List<string> SharedGroup { get; set; }
 
 
         /// <summary>
@@ -61,7 +69,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add a collection of events to the calendar.
         /// </summary>
         /// <param name="events">The Events to add to the calendar.</param>
-        private void AddEvents(List<Event> events)
+        public void AddEvents(List<Event> events)
         {
             Events.AddRange(events);
         }

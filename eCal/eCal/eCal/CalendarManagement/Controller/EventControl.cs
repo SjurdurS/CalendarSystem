@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using eCal.CalendarManagement.Model;
 using eCal.CalendarManagement.View;
 
@@ -38,6 +39,7 @@ namespace eCal.CalendarManagement.Controller
         /// <param name="events"></param>
         public List<Event> SaveMultiple(EventForm eventForm, List<Event> events)
         {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace eCal.CalendarManagement.Controller
         /// </summary>
         public Event Save()
         {
+            throw new Exception();
         }
 
         /// <summary>
@@ -56,10 +59,9 @@ namespace eCal.CalendarManagement.Controller
         /// @pre event != null
         /// @post event = null
         /// @post calendar.GetEvents().count_beforeRemove = calendar.GetEvents().count_afterRemove
-        public Event Remove(Event 
-        private event
-    )
-    {
-    }
+        public Event Remove(Event ev)
+        {
+            return null;
+        }
     }
 }
