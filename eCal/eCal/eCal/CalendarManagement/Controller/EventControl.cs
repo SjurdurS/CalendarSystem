@@ -32,13 +32,21 @@ namespace eCal.CalendarManagement.Controller
         /// <summary>
         ///     Saves multiple events.
         /// </summary>
-        /// @pre eventsForm != null
-        /// @pre events.count == null
+        /// @pre eventForm != null
+        /// @pre events != null
+        /// @pre events.count > 0
         /// @post events.count > 1
         /// @post Event e = events.GetType()
         /// <param name="events"></param>
         public List<Event> SaveMultiple(EventForm eventForm, List<Event> events)
         {
+            if (eventForm == null || events == null)
+            {
+                throw new NullReferenceException();
+            }
+
+
+
             throw new NotImplementedException();
         }
 
