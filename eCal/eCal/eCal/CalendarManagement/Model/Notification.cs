@@ -2,8 +2,14 @@
 {
     internal class Notification
     {
-        private Invitation invite;
-        private string reply;
+        private Invitation _invite;
+        private string _reply;
+
+        public Notification(Invitation invite, string reply)
+        {
+            _invite = invite;
+            _reply = reply;
+        }
 
         public Invitation SendInvite()
         {
