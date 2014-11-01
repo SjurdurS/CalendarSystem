@@ -28,20 +28,21 @@ namespace eCal.CalendarManagement.Controller
         /// <returns></returns>
         public List<Invitation> CreateInvite(ShareForm shareForm)
         {
+            // Preconditions
             if (shareForm == null)
             {
-                throw new NullReferenceException();
+                throw new ArgumentNullException("shareForm");
             }
 
-            if (shareForm.ShareAddress.Count >= 1)
+            if (shareForm.ShareAddress.Count == 0)
             {
-                var invitations = new List<Invitation>();
-                return invitations;
+                throw new ArgumentException("shareForm share address collection is empty. No address to share with.");
+
             }
-            else
-            {
-                throw new EmtpyShareAddressException();
-            }
+
+
+            var invitations = new List<Invitation>();
+            return invitations;
             
 
         }

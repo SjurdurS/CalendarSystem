@@ -24,18 +24,18 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The name of the event.
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         /// <summary>
         ///     The color of the event.
         /// </summary>
-        public string Color { get; private set; }
+        public string Color { get; set; }
 
-        public DateTime StartDateTime { get; private set; }
-        public DateTime EndDateTime { get; private set; }
-        public Alarm Alarm { get; private set; }
-        public string Place { get; private set; }
-        public string Description { get; private set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
+        public Alarm Alarm { get; set; }
+        public string Place { get; set; }
+        public string Description { get; set; }
 
         public void MoveDate(DateTime timeToMoveDateBy)
         {

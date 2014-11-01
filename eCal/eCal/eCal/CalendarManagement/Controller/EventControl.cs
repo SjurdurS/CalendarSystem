@@ -35,19 +35,32 @@ namespace eCal.CalendarManagement.Controller
         /// @pre eventForm != null
         /// @pre events != null
         /// @pre events.count > 0
-        /// @post events.count > 1
+        /// @post events.count > 0
         /// @post Event e = events.GetType()
         /// <param name="events"></param>
         public List<Event> SaveMultiple(EventForm eventForm, List<Event> events)
         {
-            if (eventForm == null || events == null)
+            // Preconditions
+            if (eventForm == null)
             {
-                throw new NullReferenceException();
+                throw new ArgumentNullException("eventForm");
+            }
+            
+            if (events == null)
+            {
+                throw new ArgumentNullException("events");
+            }
+
+            if (events.Count == 0)
+            {
+                throw new ArgumentException("events param collection is empty");
             }
 
 
-
             throw new NotImplementedException();
+
+
+            // Postconditions
         }
 
         /// <summary>
@@ -69,6 +82,18 @@ namespace eCal.CalendarManagement.Controller
         /// @post calendar.GetEvents().count_beforeRemove = calendar.GetEvents().count_afterRemove
         public Event Remove(Event ev)
         {
+            // Preconditions
+            Event e = new Event();
+            if (e.GetType() != ev.GetType())
+            {
+                throw new InvalidOperationException("event param has wrong type.");
+            }
+
+            if (ev == null)
+            {
+                throw new ArgumentNullException("ev");
+            }
+
             return null;
         }
     }

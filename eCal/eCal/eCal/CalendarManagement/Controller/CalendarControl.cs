@@ -1,4 +1,5 @@
-﻿using eCal.CalendarManagement.Model;
+﻿using System;
+using eCal.CalendarManagement.Model;
 using eCal.CalendarManagement.View;
 
 namespace eCal.CalendarManagement.Controller
@@ -46,6 +47,17 @@ namespace eCal.CalendarManagement.Controller
         /// @post user.GetCalendars().count_beforeRemove = user.GetCalendars().count_afterRemove
         public void Remove(Calendar calendar)
         {
+            // Preconditions
+            Calendar c = new Calendar();
+            if (c.GetType() != calendar.GetType())
+            {
+                throw new InvalidOperationException("calendar param has wrong type.");
+            }
+
+            if (calendar == null)
+            {
+                throw new ArgumentNullException("calendar");
+            }
         }
     }
 }
