@@ -31,4 +31,8 @@
  & 29.10.14
  & \listset {ntho}
  & Cleanup and reformatting.\\
+1.11
+ & 01.11.14
+ & \listset {ntho, sjri, anud}
+ & Updated UML Class Diagram. Added proxy design pattern to Calendar. Added an implementation of the IShare interface. Added Invitation class to the diagram.\\
 \end {longtable}
