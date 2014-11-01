@@ -6,6 +6,8 @@
         private ISynchronizationStrategy netIntf;
 
 
+        public bool Online { get; set; }
+
         public void ConnectionStatus()
         {
             if (Online)

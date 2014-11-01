@@ -4,27 +4,27 @@ using System.Collections.Generic;
 namespace eCal.CalendarManagement
 {
     /// <summary>
-    /// We do not fully understand what to implement in this design pattern
+    ///     We do not fully understand what to implement in this design pattern
     /// </summary>
-    class Composite : IEvent
+    internal class Composite : IEvent
     {
         /// <summary>
-        /// List of events.
+        ///     List of events.
         /// </summary>
-        List<IEvent> eventList = new List<IEvent>();
-
-        public void Add(IEvent eventToAdd)
-        {
-            eventList.Add(eventToAdd);
-        }
+        private readonly List<IEvent> eventList = new List<IEvent>();
 
         /// <summary>
-        /// Move dates
+        ///     Move dates
         /// </summary>
         /// <param name="timeToMoveDateBy"></param>
         public void MoveDate(DateTime timeToMoveDateBy)
         {
             throw new NotImplementedException();
+        }
+
+        public void Add(IEvent eventToAdd)
+        {
+            eventList.Add(eventToAdd);
         }
     }
 }

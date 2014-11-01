@@ -4,20 +4,20 @@ using eCal.CalendarManagement.View;
 
 namespace eCal.CalendarManagement.Controller
 {
-    class NotifyUserControl
+    internal class NotifyUserControl
     {
         /// <summary>
-        /// Creates a ShareForm in View.
+        ///     Creates a ShareForm in View.
         /// </summary>
         /// <returns></returns>
         public ShareForm CreateShareForm()
         {
-            ShareForm shareForm = new ShareForm();
+            var shareForm = new ShareForm();
             return shareForm;
         }
 
         /// <summary>
-        /// Creates a ShareForm and returns a list of invitations.
+        ///     Creates a ShareForm and returns a list of invitations.
         /// </summary>
         /// @pre ShareForm != null
         /// @pre shareForm.ShareAddress.count >= 1
@@ -25,32 +25,26 @@ namespace eCal.CalendarManagement.Controller
         /// @post shareForm.ShareAddress.count == invitations.count
         /// <param name="shareForm"></param>
         /// <returns></returns>
-        public List<Invitation> CreateInvite(ShareForm shareForm )
+        public List<Invitation> CreateInvite(ShareForm shareForm)
         {
-            List<Invitation> invitations = new List<Invitation>();
+            var invitations = new List<Invitation>();
             return invitations;
-            
-           
-            
         }
 
 
         /// <summary>
-        /// Shows and invitation as a notification. 
+        ///     Shows and invitation as a notification.
         /// </summary>
         public Notification InviteNotification()
         {
         }
 
         /// <summary>
-        /// Shows a reply as a notification.
+        ///     Shows a reply as a notification.
         /// </summary>
         /// <returns></returns>
         public Notification ReplyNotification()
-        {   
+        {
         }
-        
-
-
     }
 }

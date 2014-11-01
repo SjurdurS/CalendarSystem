@@ -1,42 +1,38 @@
-﻿using eCal.CalendarManagement.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using eCal.CalendarManagement.Model;
 
 namespace eCal.SyncSubsystem
 {
     /// <summary>
-    /// Gets the available connection. Either offline or online.
+    ///     Gets the available connection. Either offline or online.
     /// </summary>
     /// @invariant GetConnection() =! null
     internal class NetworkConnection
     {
         private List<Calendar> calendarsToUpdate;
-        private List<Event> eventsToUpdate; 
+        private List<Event> eventsToUpdate;
         private ISynchronizationStrategy intf;
         private string status;
 
         /// <summary>
-        /// Gets an offline or online connection available. OnOffManager decides the connection type. 
+        ///     Gets an offline or online connection available. OnOffManager decides the connection type.
         /// </summary>
         public ISynchronizationStrategy GetConnection()
         {
         }
 
         /// <summary>
-        /// Status on if connection is offline or online.
+        ///     Status on if connection is offline or online.
         /// </summary>
         public void Status()
         {
         }
 
         /// <summary>
-        /// Passes the connection to PersistenceImp.
+        ///     Passes the connection to PersistenceImp.
         /// </summary>
         public void NetworkStorageInformation()
         {
         }
-
-
-
-
     }
 }

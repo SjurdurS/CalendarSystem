@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading;
 using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement.Controller
@@ -9,9 +8,8 @@ namespace eCal.CalendarManagement.Controller
     /// </summary>
     internal class UpdateControl
     {
-
         /// <summary>
-        ///    Takes a list of calendars and automatically synchronize the calendars with a given time interval.
+        ///     Takes a list of calendars and automatically synchronize the calendars with a given time interval.
         /// </summary>
         public void AutoSync(List<Calendar> updateCalendar)
         {
@@ -27,25 +25,21 @@ namespace eCal.CalendarManagement.Controller
         /// @post updateCalendar.count = count
         public void Sync(List<Calendar> updateCalendar)
         {
-
             //Iterate over updateCalendar
             foreach (Calendar c in updateCalendar)
             {
                 //synchronize each calendar.
                 //count++;
             }
-
-
         }
 
         /// <summary>
-        /// Returns the status of synchronization.
+        ///     Returns the status of synchronization.
         /// </summary>
         /// <param name="status"></param>
         public void SyncStatus(Notification notification)
         {
             notification.UpdateMessage();
         }
-
     }
 }

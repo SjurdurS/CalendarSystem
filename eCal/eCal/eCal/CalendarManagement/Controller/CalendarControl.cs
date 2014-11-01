@@ -4,42 +4,41 @@ using eCal.CalendarManagement.View;
 namespace eCal.CalendarManagement.Controller
 {
     /// <summary>
-    /// This controller class is the link between CalendarForm and Calendar 
+    ///     This controller class is the link between CalendarForm and Calendar
     /// </summary>
-    class CalendarControl
+    internal class CalendarControl
     {
         /// <summary>
-        /// Creates a CalendarForm in View.
+        ///     Creates a CalendarForm in View.
         /// </summary>
         /// <returns></returns>
         public CalendarForm CreatCalendarForm()
         {
-            CalendarForm calendarForm = new CalendarForm();
+            var calendarForm = new CalendarForm();
             return calendarForm;
         }
 
         /// <summary>
-        /// Takes a CalendarForm and creates a Calendar.
+        ///     Takes a CalendarForm and creates a Calendar.
         /// </summary>
         public Calendar CreateCalendar(CalendarForm calendarForm)
         {
-            Calendar newCalendar = new Calendar();
+            var newCalendar = new Calendar();
             return newCalendar;
         }
 
-       
 
         /// <summary>
-        /// This method saves input from CalendarForm and link it to Calendar class 
-        /// whenever there is clicked edit or save.
+        ///     This method saves input from CalendarForm and link it to Calendar class
+        ///     whenever there is clicked edit or save.
         /// </summary>
         public void Save(CalendarForm calendarForm, Calendar calendar)
         {
         }
 
         /// <summary>
-        /// This method removes a calendar. When the Remove() method is called in CalendarForm 
-        /// the controller links it to a remove method in the client list
+        ///     This method removes a calendar. When the Remove() method is called in CalendarForm
+        ///     the controller links it to a remove method in the client list
         /// </summary>
         /// @pre Calendar c = calendar.GetType()
         /// @pre calendar != null

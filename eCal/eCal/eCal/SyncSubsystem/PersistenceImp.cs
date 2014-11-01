@@ -6,9 +6,9 @@ namespace eCal.SyncSubsystem
 {
     internal class PersistenceImp<T> : IPersistence<T>
     {
+        private IPersistenceImplementor<T> _implementor;
         private List<Calendar> calendarsToPass;
         private List<Event> eventsToPass;
-        private IPersistenceImplementor<T> _implementor;
 
         public PersistenceImp(IPersistenceImplementor<T> imp)
         {

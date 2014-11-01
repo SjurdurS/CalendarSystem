@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using CalendarApplication.Model;
 
 namespace eCal.CalendarManagement.Model
 {
@@ -15,7 +14,7 @@ namespace eCal.CalendarManagement.Model
         {
             Name = name;
             Color = color;
-            SharedGroup = new List<OtherUser>();
+            SharedGroup = new List<User>();
             Events = new List<Event>();
         }
 

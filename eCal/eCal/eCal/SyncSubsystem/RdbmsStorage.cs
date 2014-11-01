@@ -2,7 +2,7 @@
 
 namespace eCal.SyncSubsystem
 {
-    class RdbmsStorage<T> : IPersistenceImplementor<T>
+    internal class RdbmsStorage<T> : IPersistenceImplementor<T>
     {
         public long SaveObject(T t)
         {

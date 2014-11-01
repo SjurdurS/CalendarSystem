@@ -1,10 +1,10 @@
 ﻿namespace eCal.SyncSubsystem
 {
-    internal class ConcreteFactoryFileStorage : AbstractFactory
+    internal class ConcreteFactoryFileStorage<T> : AbstractFactory<T>
     {
         public override IPersistenceImplementor<T> CreateAbstractTestStub()
         {
-            return new TestStub();
+            return new TestStub<T>();
         }
 
         public override IPersistenceImplementor<T> CreateAbstractFileStorage()

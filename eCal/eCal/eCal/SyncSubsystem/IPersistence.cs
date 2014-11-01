@@ -3,7 +3,7 @@
 namespace eCal.SyncSubsystem
 {
     /// <summary>
-    /// Source http://www.oodesign.com/bridge-pattern-object-persistence-api-example-java-sourcecode.html
+    ///     Source http://www.oodesign.com/bridge-pattern-object-persistence-api-example-java-sourcecode.html
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IPersistence<T>
