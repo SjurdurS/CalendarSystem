@@ -1,4 +1,6 @@
-﻿namespace eCal.CalendarManagement.Model
+﻿using System;
+
+namespace eCal.CalendarManagement.Model
 {
     internal class Notification
     {
@@ -28,6 +30,7 @@
 
         public string UpdateMessage()
         {
+            throw new NotImplementedException();
         }
     }
 }
