@@ -31,7 +31,7 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The list of events assigned to this Calendar.
         /// </summary>
-        public List<Event> Events { get; set; }
+        public List<Event> Events { get; private set; }
 
         /// <summary>
         ///     List of users (addresses) this Calendar is shared with.
@@ -61,7 +61,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add a collection of events to the calendar.
         /// </summary>
         /// <param name="events">The Events to add to the calendar.</param>
-        private void AddEvents(List<Event> events)
+        public void AddEvents(List<Event> events)
         {
             Events.AddRange(events);
         }
