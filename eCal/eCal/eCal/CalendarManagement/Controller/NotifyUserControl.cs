@@ -37,11 +37,23 @@ namespace eCal.CalendarManagement.Controller
             if (shareForm.ShareAddress.Count == 0)
             {
                 throw new ArgumentException("shareForm share address collection is empty. No address to share with.");
-
             }
 
 
             var invitations = new List<Invitation>();
+
+
+            // Postconditions
+            if (invitations.Count == 0)
+            {
+                throw new InvalidOperationException("Empty invitatinos collection. No one to invite.");
+            }
+
+            if (shareForm.ShareAddress.Count != invitations.Count)
+            {
+                throw new InvalidOperationException("Number of addresses does not match the total number of invitations.");
+            }
+                 
             return invitations;
             
 

@@ -44,7 +44,7 @@ namespace eCal.CalendarManagement.Controller
         /// @pre Calendar c = calendar.GetType()
         /// @pre calendar != null
         /// @post calendar = null
-        /// @post user.GetCalendars().count_beforeRemove = user.GetCalendars().count_afterRemove
+        /// @post user.GetCalendars().count_beforeRemove > user.GetCalendars().count_afterRemove
         public void Remove(Calendar calendar)
         {
             // Preconditions
@@ -57,6 +57,22 @@ namespace eCal.CalendarManagement.Controller
             if (calendar == null)
             {
                 throw new ArgumentNullException("calendar");
+            }
+            User user;
+
+
+            var calendars_before = user.Calendars.Count;
+
+
+            // Logic to remove calendars.
+
+            var calendars_after = user.Calendars.Count;
+            
+
+            // Postconditions
+            if (calendars_before > calendars_after)
+            {
+                throw new InvalidOperationException("No calendars seem to have been removed.");
             }
         }
     }

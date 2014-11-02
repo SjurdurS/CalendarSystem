@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
 using eCal.CalendarManagement.Model;
 using eCal.CalendarManagement.View;
 
@@ -56,11 +58,24 @@ namespace eCal.CalendarManagement.Controller
                 throw new ArgumentException("events param collection is empty");
             }
 
+            Event e;
+
+            
+            // Postconditions
+            if (e.GetType() != events.GetType().GetGenericArguments().Single())
+            {
+                throw new InvalidOperationException("Event e has wrong type.");
+            }
+
+            if (events.Count == 0)
+            {
+                throw new InvalidOperationException("events collection is empty");
+            }
+
+
+
 
             throw new NotImplementedException();
-
-
-            // Postconditions
         }
 
         /// <summary>
