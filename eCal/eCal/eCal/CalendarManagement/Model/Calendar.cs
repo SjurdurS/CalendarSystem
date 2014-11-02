@@ -10,21 +10,28 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     Instantiate a new Calendar.
         /// </summary>
-        public Calendar()
+        public Calendar(User user)
         {
+            User = user;
             Name = "Default Calendar Name";
             Color = "Default Calendar Color";
             SharedGroup = new List<string>();
             Events = new List<Event>();
         }
         
-        public Calendar(string name, string color)
+        public Calendar(User user, string name, string color)
         {
+            User = user;
             Name = name;
             Color = color;
             SharedGroup = new List<string>();
             Events = new List<Event>();
         }
+
+        /// <summary>
+        /// The user which the calendar is assigned to.
+        /// </summary>
+        public User User { get; private set; }
 
         /// <summary>
         ///     The name of the Calendar.

@@ -9,17 +9,23 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         /// <param name="name"></param>
         /// <param name="color"></param>
-        public Event()
+        public Event(Calendar calendar)
         {
+            Calendar = calendar;
             Name = "Default Event Name";
             Color = "Default Event Color";
         }
         
-        public Event(string name, string color)
+        public Event(Calendar calendar, string name, string color)
         {
+            Calendar = calendar;
             Name = name;
             Color = color;
         }
+        /// <summary>
+        /// The calendar which the event is assigned to.
+        /// </summary>
+        public Calendar Calendar { get; private set; }
 
         /// <summary>
         ///     The name of the event.

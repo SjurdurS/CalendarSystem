@@ -6,10 +6,12 @@
     /// </summary>
     public class Message
     {
-        public Message(string text)
+        public Message(Alarm alarm, string text)
         {
+            Alarm = alarm;
             Text = text;
         }
+        public Alarm Alarm { get; private set; }
 
         /// <summary>
         ///     The content of the message.

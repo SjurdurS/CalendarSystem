@@ -7,10 +7,15 @@ namespace eCal.CalendarManagement.Model
     /// </summary>
     public class Alarm
     {
-        public Alarm(DateTime dateTime)
+        public Alarm(Event e, DateTime dateTime)
         {
+            Event = e;
             DateTime = dateTime;
         }
+        /// <summary>
+        /// The event which the alarm assigned to.
+        /// </summary>
+        public Event Event { get; private set; }
 
         /// <summary>
         ///     The date and time that the User should recieve the notification.

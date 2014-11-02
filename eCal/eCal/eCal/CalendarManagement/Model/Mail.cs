@@ -15,12 +15,15 @@
         /// <param name="subject">The Subject of the email.</param>
         /// <param name="message">The message body of the mail.</param>
         /// <param name="address">The email address of the mail.</param>
-        public Mail(string subject, string message, string address)
+        public Mail(Alarm alarm, string subject, string message, string address)
         {
+            Alarm = alarm;
             Subject = subject;
             Text = message;
             Address = address;
         }
+
+        public Alarm Alarm { get; private set; }
 
         /// <summary>
         ///     The subject of the mail.
