@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using eCal.CalendarManagement.Model;
 
@@ -44,7 +45,7 @@ namespace eCal.CalendarManagement.Controller
 
             if (updateCalendar.Count == 0)
             {
-                throw new ArgumentException("updateCalendar collection is empty");
+                throw new ArgumentException("updateCalendar collection is empty. Nothing to sync.");
             }
 
             //Iterate over updateCalendar
@@ -53,8 +54,6 @@ namespace eCal.CalendarManagement.Controller
                 //synchronize each calendar.
                 //count++;
             }
-
-
         }
 
         /// <summary>
