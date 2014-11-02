@@ -28,8 +28,8 @@ namespace eCal.CalendarManagement.Model
         public Mail mail { get; set; }
 
         /// <summary>
-        ///     Message to send afthe the alarm activates.
+        ///     Message to send after the alarm activates.
         /// </summary>
-        public Message message { get; set; }
+        public string Message { get; set; }
     }
 }
