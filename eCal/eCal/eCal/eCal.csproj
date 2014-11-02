@@ -56,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalendarManagement\Model\CalendarProxy.cs" />
+    <Compile Include="CalendarManagement\Model\ICalendar.cs" />
     <Compile Include="ShareSubsystem\ShareImp.cs" />
     <Compile Include="SyncSubsystem\AbstractFactory.cs" />
     <Compile Include="SyncSubsystem\ConcreteFactoryDatabaseStorage.cs" />

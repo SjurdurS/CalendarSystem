@@ -5,7 +5,7 @@ namespace eCal.CalendarManagement.Model
     /// <summary>
     ///     This class represents a Calendar in the system. A Calendar has a name and a list of Events.
     /// </summary>
-    public class Calendar
+    public class Calendar : ICalendar
     {
         /// <summary>
         ///     Instantiate a new Calendar.
@@ -119,6 +119,11 @@ namespace eCal.CalendarManagement.Model
         protected void AddToUser(User user)
         {
             user.AddCalendar(this);
+        }
+
+        public void ShowCalendar()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
