@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement
 {
@@ -11,7 +12,14 @@ namespace eCal.CalendarManagement
         /// <summary>
         ///     List of events.
         /// </summary>
-        private readonly List<IEvent> eventList = new List<IEvent>();
+        private readonly List<IEvent> _eventList = new List<IEvent>();
+
+        public string Name { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
+        public Alarm Alarm { get; set; }
+        public string Place { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         ///     Move dates
@@ -22,9 +30,24 @@ namespace eCal.CalendarManagement
             throw new NotImplementedException();
         }
 
+        public void Share(string otherUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddToCalendar(Calendar calendar)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveFromCalendar(Calendar calendar)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Add(IEvent eventToAdd)
         {
-            eventList.Add(eventToAdd);
+            _eventList.Add(eventToAdd);
         }
     }
 }

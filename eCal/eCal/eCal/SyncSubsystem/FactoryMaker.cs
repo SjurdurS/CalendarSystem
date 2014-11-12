@@ -1,22 +1,22 @@
 ﻿namespace eCal.SyncSubsystem
 {
-    public class FactoryMaker<T>
+    public class FactoryMaker<Calendar>
     {
-        private static AbstractFactory<T> pf;
+        private static AbstractFactory<Calendar> pf;
 
-        private static AbstractFactory<T> GetFactory(string choice)
+        private static AbstractFactory<Calendar> GetFactory(string choice)
         {
             if (choice == "teststub")
             {
-                pf = new ConcreteFactoryTestStub<T>();
+                pf = new ConcreteFactoryTestStub<Calendar>();
             }
             else if (choice == "fileStorage")
             {
-                pf = new ConcreteFactoryFileStorage<T>();
+                pf = new ConcreteFactoryFileStorage<Calendar>();
             }
             else if (choice == "databaseStorage")
             {
-                pf = new ConcreteFactoryDatabaseStorage<T>();
+                pf = new ConcreteFactoryDatabaseStorage<Calendar>();
             }
 
             return pf;

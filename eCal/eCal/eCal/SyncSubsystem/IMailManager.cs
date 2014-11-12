@@ -1,14 +1,16 @@
-﻿namespace eCal.SyncSubsystem
+﻿using eCal.CalendarManagement.Model;
+
+namespace eCal.SyncSubsystem
 {
     /// <summary>
     ///     This class is used to send mails.
     /// </summary>
-    internal interface IMailManager<T>
+    internal interface IMailManager
     {
         /// <summary>
         ///     Send an email.
         /// </summary>
         /// <param name="mail">The mail to send.</param>
-        void Send(T mail);
+        void Send(Mail mail);
     }
 }
