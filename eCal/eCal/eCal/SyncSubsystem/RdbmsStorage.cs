@@ -2,9 +2,9 @@
 
 namespace eCal.SyncSubsystem
 {
-    internal class RdbmsStorage<T> : IPersistenceImplementor<T>
+    internal class RdbmsStorage : IPersistenceImplementor
     {
-        public long SaveObject(T t)
+        public long SaveObject(Object obj)
         {
             // open database connection
             // create records for fields inside the object
@@ -18,7 +18,7 @@ namespace eCal.SyncSubsystem
             throw new NotImplementedException();
         }
 
-        public T GetObject(long objectId)
+        public Object GetObject(long objectId)
         {
             // open database connection
             // read records

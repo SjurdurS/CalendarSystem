@@ -2,9 +2,9 @@
 
 namespace eCal.SyncSubsystem
 {
-    internal class TestStub<T> : IPersistenceImplementor<T>
+    internal class TestStub : IPersistenceImplementor
     {
-        public long SaveObject(T t)
+        public long SaveObject(Object obj)
         {
             throw new NotImplementedException();
         }
@@ -14,7 +14,7 @@ namespace eCal.SyncSubsystem
             throw new NotImplementedException();
         }
 
-        public T GetObject(long objectId)
+        public Object GetObject(long objectId)
         {
             throw new NotImplementedException();
         }

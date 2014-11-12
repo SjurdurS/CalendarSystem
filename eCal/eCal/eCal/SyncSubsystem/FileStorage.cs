@@ -2,9 +2,9 @@
 
 namespace eCal.SyncSubsystem
 {
-    public class FileStorage<T> : IPersistenceImplementor<T>
+    public class FileStorage : IPersistenceImplementor
     {
-        public long SaveObject(T t)
+        public long SaveObject(Object obj)
         {
             throw new NotImplementedException();
         }
@@ -14,17 +14,17 @@ namespace eCal.SyncSubsystem
             throw new NotImplementedException();
         }
 
-        public T GetObject(long objectId)
+        public Object GetObject(long objectId)
         {
             throw new NotImplementedException();
         }
 
-        private T ReadObjectFromFile(T t)
+        private Object ReadObjectFromFile(Object obj)
         {
             throw new NotImplementedException();
         }
 
-        private void WriteObjectToFile(T t)
+        private void WriteObjectToFile(Object obj)
         {
             throw new NotImplementedException();
         }

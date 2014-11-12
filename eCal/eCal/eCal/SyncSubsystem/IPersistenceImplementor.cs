@@ -1,11 +1,13 @@
-﻿namespace eCal.SyncSubsystem
+﻿using System;
+
+namespace eCal.SyncSubsystem
 {
-    public interface IPersistenceImplementor<T>
+    public interface IPersistenceImplementor
     {
-        long SaveObject(T t);
+        long SaveObject(Object t);
 
         void DeleteObject(long objectId);
 
-        T GetObject(long objectId);
+        Object GetObject(long objectId);
     }
 }

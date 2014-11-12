@@ -5,20 +5,19 @@ namespace eCal.SyncSubsystem
     /// <summary>
     ///     Source http://www.oodesign.com/bridge-pattern-object-persistence-api-example-java-sourcecode.html
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public interface IPersistence<T>
+    public interface IPersistence
     {
         /// <summary>
         /// </summary>
         /// <param name="t">Item</param>
         /// <returns>The id of the Item</returns>
-        string Persist(T t);
+        string Persist(Object obj);
 
         /// <summary>
         /// </summary>
         /// <param name="itemId"></param>
         /// <returns></returns>
-        T FindById(String itemId);
+        Object FindById(String itemId);
 
         /// <summary>
         /// </summary>

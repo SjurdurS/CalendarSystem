@@ -4,23 +4,23 @@ using eCal.CalendarManagement.Model;
 
 namespace eCal.SyncSubsystem
 {
-    internal class PersistenceImp<T> : IPersistence<T>
+    internal class PersistenceImp : IPersistence
     {
-        private IPersistenceImplementor<T> _implementor;
+        private IPersistenceImplementor _implementor;
         private List<Calendar> calendarsToPass;
         private List<Event> eventsToPass;
 
-        public PersistenceImp(IPersistenceImplementor<T> imp)
+        public PersistenceImp(IPersistenceImplementor imp)
         {
             _implementor = imp;
         }
 
-        public string Persist(T t)
+        public string Persist(Object obj)
         {
             throw new NotImplementedException();
         }
 
-        public T FindById(string itemId)
+        public Object FindById(string itemId)
         {
             throw new NotImplementedException();
         }

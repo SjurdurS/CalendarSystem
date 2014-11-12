@@ -1,9 +1,9 @@
 ﻿namespace eCal.SyncSubsystem
 {
-    public abstract class AbstractFactory<T>
+    public abstract class AbstractFactory
     {
-        public abstract IPersistenceImplementor<T> CreateAbstractTestStub();
-        public abstract IPersistenceImplementor<T> CreateAbstractFileStorage();
-        public abstract IPersistenceImplementor<T> CreateAbstractDatabaseStorage();
+        public abstract IPersistenceImplementor CreateAbstractTestStub();
+        public abstract IPersistenceImplementor CreateAbstractFileStorage();
+        public abstract IPersistenceImplementor CreateAbstractDatabaseStorage();
     }
 }
