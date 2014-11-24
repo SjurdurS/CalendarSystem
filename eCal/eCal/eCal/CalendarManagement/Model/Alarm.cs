@@ -12,8 +12,9 @@ namespace eCal.CalendarManagement.Model
             Event = e;
             DateTime = dateTime;
         }
+
         /// <summary>
-        /// The event which the alarm assigned to.
+        ///     The event which the alarm assigned to.
         /// </summary>
         public IEvent Event { get; private set; }
 

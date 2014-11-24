@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using eCal.CalendarManagement.View;
 
 namespace eCal.CalendarManagement.Model
@@ -19,7 +20,7 @@ namespace eCal.CalendarManagement.Model
             SharedGroup = new List<string>();
             Events = new List<IEvent>();
         }
-        
+
         public Calendar(CalendarForm calendarForm)
         {
             Name = calendarForm.Name;
@@ -27,7 +28,7 @@ namespace eCal.CalendarManagement.Model
             SharedGroup = calendarForm.SharedGroup;
             Events = new List<IEvent>();
         }
-        
+
         public Calendar(User user, string name, string color)
         {
             User = user;
@@ -38,7 +39,7 @@ namespace eCal.CalendarManagement.Model
         }
 
         /// <summary>
-        /// The user which the calendar is assigned to.
+        ///     The user which the calendar is assigned to.
         /// </summary>
         public User User { get; private set; }
 
@@ -106,7 +107,7 @@ namespace eCal.CalendarManagement.Model
         /// <param name="events">The collection of the events to remove.</param>
         public void RemoveEvents(List<IEvent> events)
         {
-            foreach (var ev in events)
+            foreach (IEvent ev in events)
             {
                 RemoveEvent(ev);
             }
@@ -132,7 +133,7 @@ namespace eCal.CalendarManagement.Model
 
         public void ShowCalendar()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

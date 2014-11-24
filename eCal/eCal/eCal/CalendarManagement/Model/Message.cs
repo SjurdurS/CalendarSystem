@@ -11,6 +11,7 @@
             Alarm = alarm;
             Text = text;
         }
+
         public Alarm Alarm { get; private set; }
 
         /// <summary>

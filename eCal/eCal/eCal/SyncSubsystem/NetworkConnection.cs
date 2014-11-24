@@ -11,8 +11,8 @@ namespace eCal.SyncSubsystem
     /// @invariant GetConnection() =! null
     internal class NetworkConnection
     {
-        private List<ICalendar> calendarsToUpdate;
-        private List<IEvent> eventsToUpdate;
+        private List<ICalendar> _calendarsToUpdate = new List<ICalendar>();
+        private List<IEvent> _eventsToUpdate = new List<IEvent>();
         private ISynchronizationStrategy intf;
         private string status;
 

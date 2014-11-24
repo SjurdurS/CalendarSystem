@@ -12,8 +12,8 @@ namespace eCal.CalendarManagement
         DateTime EndDateTime { get; set; }
         Alarm Alarm { get; set; }
         string Place { get; set; }
-        string Description { get; set; } 
-        
+        string Description { get; set; }
+
         void MoveDate(DateTime timeToMoveDateBy);
 
         void Share(string otherUser);

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
 using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement.Controller
@@ -39,7 +37,7 @@ namespace eCal.CalendarManagement.Controller
 
             bool syncSuccessful = true;
             //Iterate over updateCalendar
-            foreach (var c in updateCalendar)
+            foreach (ICalendar c in updateCalendar)
             {
                 //synchronize each calendar.
                 // if fails syncSuccessful = false;

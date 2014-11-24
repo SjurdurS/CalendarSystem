@@ -5,7 +5,7 @@ namespace eCal.CalendarManagement.Model
     public interface ICalendar
     {
         /// <summary>
-        /// The user which the calendar is assigned to.
+        ///     The user which the calendar is assigned to.
         /// </summary>
         User User { get; }
 

@@ -10,6 +10,7 @@ namespace eCal.SyncSubsystem
         /// <summary>
         /// </summary>
         /// <param name="t">Item</param>
+        /// <param name="obj"></param>
         /// <returns>The id of the Item</returns>
         string Persist(Object obj);
 

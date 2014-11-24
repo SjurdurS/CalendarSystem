@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace eCal.CalendarManagement.Model
 {
@@ -14,7 +15,13 @@ namespace eCal.CalendarManagement.Model
             Name = name;
         }
 
+        /// <summary>
+        ///     Private Proxy name
+        /// </summary>
+        public string Name { get; private set; }
+
         public User User { get; private set; }
+
         string ICalendar.Name
         {
             get { return Name; }
@@ -24,53 +31,47 @@ namespace eCal.CalendarManagement.Model
         public string Color { get; set; }
         public List<IEvent> Events { get; private set; }
         public List<string> SharedGroup { get; set; }
+
         public void Share(User User)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void AddEvent(IEvent ev)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void AddEvents(List<IEvent> events)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool RemoveEvent(IEvent ev)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RemoveEvents(List<IEvent> events)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RemoveFromUser(User user)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void AddToUser(User user)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
-
-        /// <summary>
-        ///     Private Proxy name
-        /// </summary>
-        public string Name { get; private set; }
 
         public void ShowCalendar()
         {
-
             // create the full Calendar Object only when the Calendar is required to be shown
             // Logic to load Calendar from Storage og Database.
             //proxifiedCalendar = new Calendar();
         }
-
     }
 }

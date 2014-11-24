@@ -27,23 +27,23 @@ namespace eCal.CalendarManagement.Model
             Calendar = calendar;
             Name = name;
             Color = color;
-        }   
+        }
 
 
         /// <summary>
-        /// The calendar which the event is assigned to.
+        ///     The calendar which the event is assigned to.
         /// </summary>
         public ICalendar Calendar { get; private set; }
-
-        /// <summary>
-        ///     The name of the event.
-        /// </summary>
-        public string Name { get; set; }
 
         /// <summary>
         ///     The color of the event.
         /// </summary>
         public string Color { get; set; }
+
+        /// <summary>
+        ///     The name of the event.
+        /// </summary>
+        public string Name { get; set; }
 
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }

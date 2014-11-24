@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement.View
 {
