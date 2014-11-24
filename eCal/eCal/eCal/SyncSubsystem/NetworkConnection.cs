@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using eCal.CalendarManagement;
 using eCal.CalendarManagement.Model;
 
 namespace eCal.SyncSubsystem
@@ -10,8 +11,8 @@ namespace eCal.SyncSubsystem
     /// @invariant GetConnection() =! null
     internal class NetworkConnection
     {
-        private List<Calendar> calendarsToUpdate;
-        private List<Event> eventsToUpdate;
+        private List<ICalendar> calendarsToUpdate;
+        private List<IEvent> eventsToUpdate;
         private ISynchronizationStrategy intf;
         private string status;
 

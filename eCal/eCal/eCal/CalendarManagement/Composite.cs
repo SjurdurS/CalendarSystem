@@ -35,12 +35,12 @@ namespace eCal.CalendarManagement
             throw new NotImplementedException();
         }
 
-        public void AddToCalendar(Calendar calendar)
+        public void AddToCalendar(ICalendar calendar)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveFromCalendar(Calendar calendar)
+        public void RemoveFromCalendar(ICalendar calendar)
         {
             throw new NotImplementedException();
         }

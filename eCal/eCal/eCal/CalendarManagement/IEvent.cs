@@ -3,7 +3,7 @@ using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement
 {
-    internal interface IEvent
+    public interface IEvent
     {
         string Name { get; set; }
 
@@ -18,8 +18,8 @@ namespace eCal.CalendarManagement
 
         void Share(string otherUser);
 
-        void AddToCalendar(Calendar calendar);
+        void AddToCalendar(ICalendar calendar);
 
-        void RemoveFromCalendar(Calendar calendar);
+        void RemoveFromCalendar(ICalendar calendar);
     }
 }

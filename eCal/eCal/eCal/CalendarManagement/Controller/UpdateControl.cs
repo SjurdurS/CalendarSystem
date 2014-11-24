@@ -14,7 +14,7 @@ namespace eCal.CalendarManagement.Controller
         /// <summary>
         ///     Takes a list of calendars and automatically synchronize the calendars with a given time interval.
         /// </summary>
-        public void AutoSync(List<Calendar> updateCalendar)
+        public void AutoSync(List<ICalendar> updateCalendar)
         {
         }
 
@@ -22,22 +22,11 @@ namespace eCal.CalendarManagement.Controller
         ///     Synchronize the calendars whenever the User clicks the synchronize button.
         /// </summary>
         /// @pre updateCalendar != null
-        /// @pre Calendar c = updateCalendar.GetType()
-        /// @pre count = 0
         /// @pre updateCalendar.Count > 0
-        /// @post count > 0
-        /// @post updateCalendar.count = count
-        public void Sync(List<Calendar> updateCalendar)
+        /// @post should return true if successfully synchronized, and false otherwise.
+        public bool Sync(List<ICalendar> updateCalendar)
         {
-            var count = 0;
-
             // Preconditions
-            Calendar cal = new Calendar();
-            if (cal.GetType() != updateCalendar.GetType().GetGenericArguments().Single())
-            {
-                throw new InvalidOperationException("updateCalendar param has wrong item type.");
-            }
-
             if (updateCalendar == null)
             {
                 throw new ArgumentNullException("updateCalendar");
@@ -48,12 +37,16 @@ namespace eCal.CalendarManagement.Controller
                 throw new ArgumentException("updateCalendar collection is empty. Nothing to sync.");
             }
 
+            bool syncSuccessful = true;
             //Iterate over updateCalendar
-            foreach (Calendar c in updateCalendar)
+            foreach (var c in updateCalendar)
             {
                 //synchronize each calendar.
-                //count++;
+                // if fails syncSuccessful = false;
             }
+
+            // should return true if successfully synchronized, and false otherwise.
+            return syncSuccessful;
         }
 
         /// <summary>

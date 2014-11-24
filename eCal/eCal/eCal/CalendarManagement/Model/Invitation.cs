@@ -2,10 +2,10 @@
 {
     internal class Invitation
     {
-        private Calendar calendar;
-        private Event ev;
+        private ICalendar calendar;
+        private IEvent ev;
 
-        public Invitation(string name, string message, Event ev)
+        public Invitation(string name, string message, IEvent ev)
         {
             Name = name;
             Message = message;
@@ -13,7 +13,7 @@
         }
 
 
-        public Invitation(string name, string message, Calendar calendar)
+        public Invitation(string name, string message, ICalendar calendar)
         {
             Name = name;
             Message = message;

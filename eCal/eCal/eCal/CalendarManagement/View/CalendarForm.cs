@@ -3,11 +3,16 @@ using eCal.CalendarManagement.Model;
 
 namespace eCal.CalendarManagement.View
 {
-    internal class CalendarForm
+    public class CalendarForm
     {
+        public CalendarForm()
+        {
+            SharedGroup = new List<string>();
+        }
+
         public string Name { get; set; }
         public string Color { get; set; }
-        public List<User> SharedGroup { get; private set; }
+        public List<string> SharedGroup { get; private set; }
 
         public void Remove()
         {

@@ -7,25 +7,33 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     Instantiate a new Event.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="color"></param>
-        public Event(Calendar calendar)
+        /// <param name="calendar"></param>
+        public Event(ICalendar calendar)
         {
             Calendar = calendar;
             Name = "Default Event Name";
             Color = "Default Event Color";
         }
-        
-        public Event(Calendar calendar, string name, string color)
+
+
+        /// <summary>
+        ///     Instantiate a new Event.
+        /// </summary>
+        /// <param name="calendar"></param>
+        /// <param name="name"></param>
+        /// <param name="color"></param>
+        public Event(ICalendar calendar, string name, string color)
         {
             Calendar = calendar;
             Name = name;
             Color = color;
-        }
+        }   
+
+
         /// <summary>
         /// The calendar which the event is assigned to.
         /// </summary>
-        public Calendar Calendar { get; private set; }
+        public ICalendar Calendar { get; private set; }
 
         /// <summary>
         ///     The name of the event.
@@ -60,7 +68,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add This Event to a Calendar.
         /// </summary>
         /// <param name="calendar">The Calendar to add this event to.</param>
-        public void AddToCalendar(Calendar calendar)
+        public void AddToCalendar(ICalendar calendar)
         {
             calendar.AddEvent(this);
         }
@@ -69,7 +77,7 @@ namespace eCal.CalendarManagement.Model
         ///     Remove This event from a Calendar.
         /// </summary>
         /// <param name="calendar">The Calendar to remove this event from.</param>
-        public void RemoveFromCalendar(Calendar calendar)
+        public void RemoveFromCalendar(ICalendar calendar)
         {
             calendar.RemoveEvent(this);
         }

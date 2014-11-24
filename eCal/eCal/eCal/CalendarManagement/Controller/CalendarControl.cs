@@ -22,9 +22,9 @@ namespace eCal.CalendarManagement.Controller
         /// <summary>
         ///     Takes a CalendarForm and creates a Calendar.
         /// </summary>
-        public Calendar CreateCalendar(CalendarForm calendarForm)
+        public ICalendar CreateCalendar(CalendarForm calendarForm)
         {
-            var newCalendar = new Calendar();
+            var newCalendar = new Calendar(calendarForm);
             return newCalendar;
         }
 
@@ -33,7 +33,7 @@ namespace eCal.CalendarManagement.Controller
         ///     This method saves input from CalendarForm and link it to Calendar class
         ///     whenever there is clicked edit or save.
         /// </summary>
-        public void Save(CalendarForm calendarForm, Calendar calendar)
+        public void Save(CalendarForm calendarForm, ICalendar calendar)
         {
         }
 
@@ -54,16 +54,16 @@ namespace eCal.CalendarManagement.Controller
             }
 
             string username = "";
-            User user = new User(username);
+            var user = new User(username);
 
 
-            var calendars_before = user.Calendars.Count;
+            int calendars_before = user.Calendars.Count;
 
 
             // Logic to remove calendars.
 
-            var calendars_after = user.Calendars.Count;
-            
+            int calendars_after = user.Calendars.Count;
+
 
             // Postconditions
             if (calendars_before > calendars_after)

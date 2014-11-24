@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using eCal.CalendarManagement.View;
 
 namespace eCal.CalendarManagement.Model
 {
@@ -16,7 +17,15 @@ namespace eCal.CalendarManagement.Model
             Name = "Default Calendar Name";
             Color = "Default Calendar Color";
             SharedGroup = new List<string>();
-            Events = new List<Event>();
+            Events = new List<IEvent>();
+        }
+        
+        public Calendar(CalendarForm calendarForm)
+        {
+            Name = calendarForm.Name;
+            Color = calendarForm.Color;
+            SharedGroup = calendarForm.SharedGroup;
+            Events = new List<IEvent>();
         }
         
         public Calendar(User user, string name, string color)
@@ -25,7 +34,7 @@ namespace eCal.CalendarManagement.Model
             Name = name;
             Color = color;
             SharedGroup = new List<string>();
-            Events = new List<Event>();
+            Events = new List<IEvent>();
         }
 
         /// <summary>
@@ -46,7 +55,7 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The list of events assigned to this Calendar.
         /// </summary>
-        public List<Event> Events { get; private set; }
+        public List<IEvent> Events { get; private set; }
 
         /// <summary>
         ///     List of users (addresses) this Calendar is shared with.
@@ -67,7 +76,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add one event to the calendar.
         /// </summary>
         /// <param name="e">The event to add to the calendar.</param>
-        public void AddEvent(Event ev)
+        public void AddEvent(IEvent ev)
         {
             Events.Add(ev);
         }
@@ -76,7 +85,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add a collection of events to the calendar.
         /// </summary>
         /// <param name="events">The Events to add to the calendar.</param>
-        public void AddEvents(List<Event> events)
+        public void AddEvents(List<IEvent> events)
         {
             Events.AddRange(events);
         }
@@ -86,7 +95,7 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         /// <param name="ev">The event to remove.</param>
         /// <returns>Returns true if the event was successfully removed.</returns>
-        public bool RemoveEvent(Event ev)
+        public bool RemoveEvent(IEvent ev)
         {
             return Events.Remove(ev);
         }
@@ -95,9 +104,9 @@ namespace eCal.CalendarManagement.Model
         ///     Remove a collection of Events from the calendar.
         /// </summary>
         /// <param name="events">The collection of the events to remove.</param>
-        public void RemoveEvents(List<Event> events)
+        public void RemoveEvents(List<IEvent> events)
         {
-            foreach (Event ev in events)
+            foreach (var ev in events)
             {
                 RemoveEvent(ev);
             }
@@ -107,7 +116,7 @@ namespace eCal.CalendarManagement.Model
         ///     Remove this Calendar from a User.
         /// </summary>
         /// <param name="user">The User to remove this Calendar from.</param>
-        protected void RemoveFromUser(User user)
+        public void RemoveFromUser(User user)
         {
             user.RemoveCalendar(this);
         }
@@ -116,7 +125,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add this Calendar to a User.
         /// </summary>
         /// <param name="user">The User to add this Calendar to.</param>
-        protected void AddToUser(User user)
+        public void AddToUser(User user)
         {
             user.AddCalendar(this);
         }

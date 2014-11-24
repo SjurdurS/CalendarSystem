@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
 using eCal.CalendarManagement.Model;
 using eCal.CalendarManagement.View;
 
@@ -12,6 +10,13 @@ namespace eCal.CalendarManagement.Controller
     /// </summary>
     internal class EventControl
     {
+        private readonly ICalendar _calendar;
+
+        public EventControl(ICalendar calendar)
+        {
+            _calendar = calendar;
+        }
+
         /// <summary>
         ///     Creates an EventForm in View.
         /// </summary>
@@ -25,29 +30,25 @@ namespace eCal.CalendarManagement.Controller
         /// <summary>
         ///     Takes an EventForm and creates an Event.
         /// </summary>
-        public Event CreateEvent(EventForm EventForm)
+        public IEvent CreateEvent(EventForm eventForm)
         {
-            var newEvent = new Event();
+            string name = eventForm.Name;
+            string color = eventForm.Color;
+
+            var newEvent = new Event(_calendar, name, color);
             return newEvent;
         }
 
         /// <summary>
         ///     Saves multiple events.
         /// </summary>
-        /// @pre eventForm != null
         /// @pre events != null
         /// @pre events.count > 0
-        /// @post events.count > 0
-        /// @post Event e = events.GetType()
-        /// <param name="events"></param>
-        public List<Event> SaveMultiple(EventForm eventForm, List<Event> events)
+        /// @post returns true if all events were saved to the database.
+        /// <param name="events">List of events to save</param>
+        public bool SaveMultiple(List<IEvent> events)
         {
             // Preconditions
-            if (eventForm == null)
-            {
-                throw new ArgumentNullException("eventForm");
-            }
-            
             if (events == null)
             {
                 throw new ArgumentNullException("events");
@@ -58,22 +59,8 @@ namespace eCal.CalendarManagement.Controller
                 throw new ArgumentException("events param collection is empty");
             }
 
-            Event e;
-
-            
-            // Postconditions
-            if (e.GetType() != events.GetType().GetGenericArguments().Single())
-            {
-                throw new InvalidOperationException("Event e has wrong type.");
-            }
-
-            if (events.Count == 0)
-            {
-                throw new InvalidOperationException("events collection is empty");
-            }
-
-
-
+            // Postcondition
+            // should return true if all events were saved to the database.
 
             throw new NotImplementedException();
         }
@@ -82,7 +69,7 @@ namespace eCal.CalendarManagement.Controller
         ///     This method saves input from EventForm and link it to Event class
         ///     whenever there is clicked edit or save.
         /// </summary>
-        public Event Save()
+        public IEvent Save()
         {
             throw new Exception();
         }
@@ -91,25 +78,24 @@ namespace eCal.CalendarManagement.Controller
         ///     This method removes an Event. When the Remove() method is called in EventForm
         ///     the controller links it to a remove method in the client list
         /// </summary>
-        /// @pre Event e = event.GetType()
+        /// <returns>Returns true if the event was successfully removed</returns>
         /// @pre event != null
-        /// @post event = null
-        /// @post calendar.GetEvents().count_beforeRemove = calendar.GetEvents().count_afterRemove
-        public Event Remove(Event ev)
+        /// @post calendar.GetEvents().count_beforeRemove > calendar.GetEvents().count_afterRemove
+        /// @post returns true if the Event was successfully removed from the Calendar.
+        public bool Remove(IEvent ev)
         {
             // Preconditions
-            Event e = new Event();
-            if (e.GetType() != ev.GetType())
-            {
-                throw new InvalidOperationException("event param has wrong type.");
-            }
-
             if (ev == null)
             {
                 throw new ArgumentNullException("ev");
             }
 
-            return null;
+            // Remove event from Calendar.
+
+            // Postcondition
+            // if event removed return True else False;
+
+            throw new NotImplementedException();
         }
     }
 }

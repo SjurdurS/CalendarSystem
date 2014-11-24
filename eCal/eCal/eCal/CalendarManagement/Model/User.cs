@@ -16,8 +16,9 @@ namespace eCal.CalendarManagement.Model
         /// <param name="username">The username of the User</param>
         public User(string username)
         {
+            if (username == null) throw new ArgumentNullException("username");
             Username = username;
-            Calendars = new List<Calendar>();
+            Calendars = new List<ICalendar>();
         }
 
         /// <summary>
@@ -27,9 +28,11 @@ namespace eCal.CalendarManagement.Model
         /// <param name="emailAddress">The emailaddress of the client.</param>
         public User(string username, string emailAddress)
         {
+            if (username == null) throw new ArgumentNullException("username");
+            if (emailAddress == null) throw new ArgumentNullException("emailAddress");
             Username = username;
             EmailAddress = emailAddress;
-            Calendars = new List<Calendar>();
+            Calendars = new List<ICalendar>();
         }
 
         /// <summary>
@@ -37,8 +40,9 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         /// <param name="username">The username of the User</param>
         /// <param name="calendars">The list of Calendars this client is assigned to</param>
-        public User(string username, List<Calendar> calendars)
+        public User(string username, IEnumerable<ICalendar> calendars)
         {
+            if (username == null) throw new ArgumentNullException("username");
             if (Calendars == null) throw new ArgumentNullException("calendars");
             Username = username;
             Calendars = Calendars;
@@ -50,7 +54,7 @@ namespace eCal.CalendarManagement.Model
         /// <param name="username">The username of the User</param>
         /// <param name="emailAddress">The emailaddress of the client.</param>
         /// <param name="calendars">The list of Calendars this client is assigned to</param>
-        public User(string username, string emailAddress, List<Calendar> calendars)
+        public User(string username, string emailAddress, IEnumerable<Calendar> calendars)
         {
             if (Calendars == null) throw new ArgumentNullException("calendars");
             Username = username;
@@ -71,15 +75,16 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     List of Calendars the client has assigned.
         /// </summary>
-        public List<Calendar> Calendars { get; set; }
+        public List<ICalendar> Calendars { get; set; }
 
         /// <summary>
         ///     Remove a Calendar from the Clients list of Calendars.
         /// </summary>
         /// <param name="calendar">The calendar to remove</param>
         /// <returns></returns>
-        public bool RemoveCalendar(Calendar calendar)
+        public bool RemoveCalendar(ICalendar calendar)
         {
+            if (calendar == null) throw new ArgumentNullException("calendar");
             return Calendars.Remove(calendar);
         }
 
@@ -88,9 +93,10 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         /// <param name="calendars">The calendars to remove.</param>
         /// <returns></returns>
-        public void RemoveCalendars(List<Calendar> calendars)
+        public void RemoveCalendars(List<ICalendar> calendars)
         {
-            foreach (Calendar calendar in calendars)
+            if (calendars == null) throw new ArgumentNullException("calendars");
+            foreach (ICalendar calendar in calendars)
             {
                 RemoveCalendar(calendar);
             }
@@ -100,8 +106,9 @@ namespace eCal.CalendarManagement.Model
         ///     Add a Calendar to the Calendars list.
         /// </summary>
         /// <param name="calendar">The Calendar to add.</param>
-        public void AddCalendar(Calendar calendar)
+        public void AddCalendar(ICalendar calendar)
         {
+            if (calendar == null) throw new ArgumentNullException("calendar");
             Calendars.Add(calendar);
         }
 
@@ -109,9 +116,10 @@ namespace eCal.CalendarManagement.Model
         ///     Add a Collection of Calendars to the Calendars list.
         /// </summary>
         /// <param name="calendars">The Collection of Calendars to add.</param>
-        public void AddCalendars(List<Calendar> calendars)
+        public void AddCalendars(List<ICalendar> calendars)
         {
-            foreach (Calendar calendar in calendars)
+            if (calendars == null) throw new ArgumentNullException("calendars");
+            foreach (ICalendar calendar in calendars)
             {
                 AddCalendar(calendar);
             }
