@@ -42,23 +42,11 @@ namespace eCal.CalendarManagement.Model
         void AddEvent(IEvent ev);
 
         /// <summary>
-        ///     Add a collection of events to the calendar.
-        /// </summary>
-        /// <param name="events">The Events to add to the calendar.</param>
-        void AddEvents(List<IEvent> events);
-
-        /// <summary>
         ///     Remove an event from the Calendar.
         /// </summary>
         /// <param name="ev">The event to remove.</param>
         /// <returns>Returns true if the event was successfully removed.</returns>
         bool RemoveEvent(IEvent ev);
-
-        /// <summary>
-        ///     Remove a collection of Events from the calendar.
-        /// </summary>
-        /// <param name="events">The collection of the events to remove.</param>
-        void RemoveEvents(List<IEvent> events);
 
         /// <summary>
         ///     Remove this Calendar from a User.

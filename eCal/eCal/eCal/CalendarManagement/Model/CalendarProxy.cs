@@ -42,17 +42,7 @@ namespace eCal.CalendarManagement.Model
             throw new NotImplementedException();
         }
 
-        public void AddEvents(List<IEvent> events)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool RemoveEvent(IEvent ev)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveEvents(List<IEvent> events)
         {
             throw new NotImplementedException();
         }
