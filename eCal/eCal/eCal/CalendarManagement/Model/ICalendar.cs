@@ -7,7 +7,7 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The user which the calendar is assigned to.
         /// </summary>
-        User User { get; }
+        IUser User { get; }
 
         /// <summary>
         ///     The name of the Calendar.
@@ -33,7 +33,7 @@ namespace eCal.CalendarManagement.Model
         ///     Share the Calendar with another user.
         /// </summary>
         /// <param name="User">The recipient of the Calendar</param>
-        void Share(User User);
+        void Share(IUser User);
 
         /// <summary>
         ///     Add one event to the calendar.
@@ -52,13 +52,13 @@ namespace eCal.CalendarManagement.Model
         ///     Remove this Calendar from a User.
         /// </summary>
         /// <param name="user">The User to remove this Calendar from.</param>
-        void RemoveFromUser(User user);
+        void RemoveFromUser(IUser user);
 
         /// <summary>
         ///     Add this Calendar to a User.
         /// </summary>
         /// <param name="user">The User to add this Calendar to.</param>
-        void AddToUser(User user);
+        void AddToUser(IUser user);
 
         void ShowCalendar();
     }

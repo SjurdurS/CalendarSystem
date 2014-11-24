@@ -20,7 +20,7 @@ namespace eCal.CalendarManagement.Model
         /// </summary>
         public string Name { get; private set; }
 
-        public User User { get; private set; }
+        public IUser User { get; private set; }
 
         string ICalendar.Name
         {
@@ -32,7 +32,7 @@ namespace eCal.CalendarManagement.Model
         public List<IEvent> Events { get; private set; }
         public List<string> SharedGroup { get; set; }
 
-        public void Share(User User)
+        public void Share(IUser User)
         {
             throw new NotImplementedException();
         }
@@ -47,12 +47,12 @@ namespace eCal.CalendarManagement.Model
             throw new NotImplementedException();
         }
 
-        public void RemoveFromUser(User user)
+        public void RemoveFromUser(IUser user)
         {
             throw new NotImplementedException();
         }
 
-        public void AddToUser(User user)
+        public void AddToUser(IUser user)
         {
             throw new NotImplementedException();
         }

@@ -8,7 +8,7 @@ namespace eCal.CalendarManagement.Model
     /// </summary>
     /// @invariant GetUsername() != null 
     /// @invariant GetEmailAddress() != null
-    public class User
+    public class User : IUser
     {
         /// <summary>
         ///     Instantiate a User with a username and an empty Calendars list.

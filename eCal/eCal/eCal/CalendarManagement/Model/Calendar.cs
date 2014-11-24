@@ -12,7 +12,7 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     Instantiate a new Calendar.
         /// </summary>
-        public Calendar(User user)
+        public Calendar(IUser user)
         {
             User = user;
             Name = "Default Calendar Name";
@@ -29,7 +29,7 @@ namespace eCal.CalendarManagement.Model
             Events = new List<IEvent>();
         }
 
-        public Calendar(User user, string name, string color)
+        public Calendar(IUser user, string name, string color)
         {
             User = user;
             Name = name;
@@ -41,7 +41,7 @@ namespace eCal.CalendarManagement.Model
         /// <summary>
         ///     The user which the calendar is assigned to.
         /// </summary>
-        public User User { get; private set; }
+        public IUser User { get; private set; }
 
         /// <summary>
         ///     The name of the Calendar.
@@ -68,7 +68,7 @@ namespace eCal.CalendarManagement.Model
         ///     Share the Calendar with another user.
         /// </summary>
         /// <param name="User">The recipient of the Calendar</param>
-        public void Share(User User)
+        public void Share(IUser User)
         {
             // Share Calendar with another user.
         }
@@ -117,7 +117,7 @@ namespace eCal.CalendarManagement.Model
         ///     Remove this Calendar from a User.
         /// </summary>
         /// <param name="user">The User to remove this Calendar from.</param>
-        public void RemoveFromUser(User user)
+        public void RemoveFromUser(IUser user)
         {
             user.RemoveCalendar(this);
         }
@@ -126,7 +126,7 @@ namespace eCal.CalendarManagement.Model
         ///     Add this Calendar to a User.
         /// </summary>
         /// <param name="user">The User to add this Calendar to.</param>
-        public void AddToUser(User user)
+        public void AddToUser(IUser user)
         {
             user.AddCalendar(this);
         }
