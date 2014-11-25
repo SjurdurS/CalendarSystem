@@ -2,6 +2,11 @@
 {
     public class FactoryMaker
     {
+        /// <summary>
+        /// Takes an 
+        /// </summary>
+        private IPersistenceImplementor storage;
+
         private static AbstractFactory pf;
 
         private static AbstractFactory GetFactory(string choice)

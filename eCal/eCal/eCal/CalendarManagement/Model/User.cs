@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using eCal.ShareSubsystem;
 
 namespace eCal.CalendarManagement.Model
 {
@@ -60,6 +61,13 @@ namespace eCal.CalendarManagement.Model
             Username = username;
             EmailAddress = emailAddress;
             Calendars = Calendars;
+        }
+
+        private GoogleAdapter googleAdapter;
+
+        public ICalendarEntry ConnectToGoogleAdapter()
+        {
+            return googleAdapter;
         }
 
         /// <summary>

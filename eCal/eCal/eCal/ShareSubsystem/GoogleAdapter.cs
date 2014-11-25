@@ -1,4 +1,6 @@
 ﻿using System;
+using eCal.CalendarManagement.Controller;
+using eCal.CalendarManagement.Model;
 
 namespace eCal.ShareSubsystem
 {
@@ -7,6 +9,9 @@ namespace eCal.ShareSubsystem
     /// </summary>
     internal class GoogleAdapter : ICalendarEntry
     {
+     
+        private IUser user;
+
         public void CreateEvent()
         {
             throw new NotImplementedException();

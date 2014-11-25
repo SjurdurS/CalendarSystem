@@ -25,6 +25,14 @@ namespace eCal.SyncSubsystem
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the available networkconnection. Information is used to determine which storage is to be used. 
+        /// </summary>
+        public NetworkConnection GetNetworkConnection()
+        {
+            
+        }
+
         public void DeleteById(string id)
         {
             throw new NotImplementedException();
