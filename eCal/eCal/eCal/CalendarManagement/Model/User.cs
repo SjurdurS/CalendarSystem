@@ -15,17 +15,6 @@ namespace eCal.CalendarManagement.Model
         ///     Instantiate a User with a username and an empty Calendars list.
         /// </summary>
         /// <param name="username">The username of the User</param>
-        public User(string username)
-        {
-            if (username == null) throw new ArgumentNullException("username");
-            Username = username;
-            Calendars = new List<ICalendar>();
-        }
-
-        /// <summary>
-        ///     Instantiate a User with a username and an empty Calendars list.
-        /// </summary>
-        /// <param name="username">The username of the User</param>
         /// <param name="emailAddress">The emailaddress of the client.</param>
         public User(string username, string emailAddress)
         {
