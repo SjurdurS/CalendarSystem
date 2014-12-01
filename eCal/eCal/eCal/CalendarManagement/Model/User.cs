@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using eCal.ShareSubsystem;
 
 namespace eCal.CalendarManagement.Model
 {
@@ -10,17 +11,6 @@ namespace eCal.CalendarManagement.Model
     /// @invariant GetEmailAddress() != null
     public class User : IUser
     {
-        /// <summary>
-        ///     Instantiate a User with a username and an empty Calendars list.
-        /// </summary>
-        /// <param name="username">The username of the User</param>
-        public User(string username)
-        {
-            if (username == null) throw new ArgumentNullException("username");
-            Username = username;
-            Calendars = new List<ICalendar>();
-        }
-
         /// <summary>
         ///     Instantiate a User with a username and an empty Calendars list.
         /// </summary>
@@ -60,6 +50,13 @@ namespace eCal.CalendarManagement.Model
             Username = username;
             EmailAddress = emailAddress;
             Calendars = Calendars;
+        }
+
+        private GoogleAdapter googleAdapter;
+
+        public ICalendarEntry ConnectToGoogleAdapter()
+        {
+            return googleAdapter;
         }
 
         /// <summary>

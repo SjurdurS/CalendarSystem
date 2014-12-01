@@ -7,7 +7,10 @@ namespace eCal.SyncSubsystem
     /// </summary>
     internal class OnlineSS : ISynchronizationStrategy
     {
-        public void Synchronize()
+        /// <summary>
+        /// Information about if the synchronization should be online or offline(local)
+        /// </summary>
+        public void SynchronizeConnection()
         {
             throw new NotImplementedException();
         }

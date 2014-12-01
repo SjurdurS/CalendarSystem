@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using eCal.CalendarManagement.Controller;
 using eCal.CalendarManagement.Model;
 
 namespace eCal.ShareSubsystem
@@ -9,6 +10,8 @@ namespace eCal.ShareSubsystem
     /// </summary>
     internal class ShareImp : IShare
     {
+        private NotifyUserControl controller;
+
         public List<Notification> GetNotifications()
         {
             throw new NotImplementedException();

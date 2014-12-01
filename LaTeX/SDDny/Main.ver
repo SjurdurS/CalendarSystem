@@ -39,4 +39,8 @@
  & 02.11.14
  & \listset {sjri}
  & Removed the Message class and added a Message string attribute to the Alarm class instead. Updated the UML Class Diagram and the architectural prototype accordingly.\\
+1.13
+ & 26.11.14
+ & \listset {anud,sjri,ntho}
+ & Updated class diagram\\
 \end {longtable}

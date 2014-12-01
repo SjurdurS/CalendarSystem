@@ -3,7 +3,7 @@
     /// <summary>
     ///     Part of the adapter pattern, The entry interface
     /// </summary>
-    internal interface ICalendarEntry
+    public interface ICalendarEntry
     {
         void CreateEvent();
 
